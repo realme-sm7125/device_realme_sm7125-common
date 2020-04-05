@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%s</xliff:g> • SuperDart Charging</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • SuperDart Charging</string>
+</resources>
