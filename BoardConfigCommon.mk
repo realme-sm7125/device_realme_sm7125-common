@@ -182,6 +182,7 @@ TARGET_BOOTLOADER_BOARD_NAME := atoll
 # Power
 TARGET_POWERHAL_BOOST_EXT := $(COMMON_PATH)/power/boost-ext.cpp
 TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/mode-ext.cpp
+TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
