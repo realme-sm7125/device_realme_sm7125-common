@@ -296,6 +296,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RealmeParts
 
+ifeq ($(WITH_GAPPS), true)
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+endif
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
