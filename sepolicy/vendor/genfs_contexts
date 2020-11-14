@@ -63,3 +63,6 @@ genfscon sysfs /devices/platform/soc/880000.i2c/i2c-0/0-0028/wakeup    u:object_
 genfscon proc /fastchg_fw_update              u:object_r:proc_fw_update:s0
 
 genfscon proc /ui_soc_decimal              u:object_r:proc_decimal:s0
+
+# Kernelspace battrry saver
+genfscon sysfs /module/battery_saver/parameters/enabled                u:object_r:sysfs_battery_saver:s0

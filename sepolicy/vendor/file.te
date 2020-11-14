@@ -32,3 +32,6 @@ type proc_oppo_rf, fs_type, proc_type;
 type proc_fw_update, fs_type, proc_type;
 
 type proc_decimal, fs_type, proc_type;
+
+# Kernelspace battery saver
+type sysfs_battery_saver, fs_type, sysfs_type;
