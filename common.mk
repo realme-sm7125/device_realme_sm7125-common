@@ -238,7 +238,8 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-lineage \
+    $(LOCAL_PATH)/overlay-ssos
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -383,3 +384,7 @@ PRODUCT_PACKAGES += \
 
 #PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Product namespace
+PRODUCT_BOARD_PLATFORM := atoll
+PRODUCT_USES_QCOM_HARDWARE := true
