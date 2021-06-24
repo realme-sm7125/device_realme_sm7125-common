@@ -27,7 +27,8 @@
         android:key="otg_category"
         android:title="@string/otg">
 
-        <SwitchPreference
+
+    <com.ssos.support.preferences.SwitchPreference
             android:key="otg"
             android:summary="@string/otg_summary"
             android:title="@string/otg_title" />

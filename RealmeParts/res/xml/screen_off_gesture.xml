@@ -21,7 +21,7 @@
             android:key="dt2w"
             android:title="@string/dt2w_title" >
 
-        <SwitchPreference
+        <com.ssos.support.preferences.SwitchPreference
             android:key="enable_dt2w"
             android:title="@string/enable_dt2w_title"
             android:persistent="false"
@@ -37,7 +37,7 @@
             android:key="haptic"
             android:title="@string/haptic_feedback_title" >
 
-            <SwitchPreference
+            <com.ssos.support.preferences.SwitchPreference
                 android:key="gesture_haptic_feedback"
                 android:persistent="false"
                 android:title="@string/touchscreen_gesture_haptic_feedback"
@@ -48,7 +48,7 @@
             android:key="gestures"
             android:title="@string/gestures_title" >
 
-            <SwitchPreference
+            <com.ssos.support.preferences.SwitchPreference
                 android:key="enable_gestures"
                 android:title="@string/enable_gestures_title"
                 android:persistent="false"
