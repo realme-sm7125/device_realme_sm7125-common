@@ -25,11 +25,13 @@
             android:key="enable_dt2w"
             android:title="@string/enable_dt2w_title"
             android:persistent="false"
+            android:icon="@drawable/ic_enable_dt2w"
             android:summary="@string/enable_dt2w_summary" />
             <Preference
                 android:key="gesture_double_tap"
                 android:title="@string/gesture_double_tap_title"
                 android:persistent="false"
+                android:icon="@drawable/ic_gesture_double_tap"
                 android:dependency="enable_dt2w" />
         </PreferenceCategory>
 
@@ -40,6 +42,7 @@
             <com.ssos.support.preferences.SwitchPreference
                 android:key="gesture_haptic_feedback"
                 android:persistent="false"
+                android:icon="@drawable/ic_gesture_haptic_feedback"
                 android:title="@string/touchscreen_gesture_haptic_feedback"
                 android:summary="@string/touchscreen_gesture_haptic_feedback_summary" />
         </PreferenceCategory>
