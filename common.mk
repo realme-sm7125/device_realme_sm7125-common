@@ -253,6 +253,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
+# Prebuilt apps (papps)
+PRODUCT_PACKAGES += \
+    GCamGo
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service
