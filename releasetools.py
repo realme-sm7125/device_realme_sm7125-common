@@ -35,3 +35,8 @@ def OTA_InstallEnd(info, input_zip):
   AddImage(info, input_zip, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
   AddImage(info, input_zip, "vbmeta_system.img", "/dev/block/bootdevice/by-name/vbmeta_system")
   return
+
+def OTA_InstallEnd(info, input_zip):
+  info.script.AppendExtra('ui_print("Moving FOD icons to sdcard/DerpFOD/");')
+  info.script.AppendExtra('run_program("/sbin/sh", "/tmp/install/bin/post_install.sh");')
+  return
