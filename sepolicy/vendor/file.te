@@ -24,3 +24,6 @@ type proc_flash, fs_type, proc_type;
 
 # LCD
 type proc_lcd, fs_type, proc_type;
+
+# Oppo rf
+type proc_oppo_rf, fs_type, proc_type;
