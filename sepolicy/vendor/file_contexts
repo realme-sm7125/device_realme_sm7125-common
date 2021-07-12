@@ -36,7 +36,3 @@
 
 # Oppo nv
 /data/opponvitems(/.*)?    u:object_r:vendor_radio_vendor_data_file:s0
-
-# Kernel wakeup
-/sys/class/wakeup/wakeup[0-99](/.*)?     u:object_r:sysfs_wakeup:s0
-
