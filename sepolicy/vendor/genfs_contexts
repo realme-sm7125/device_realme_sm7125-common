@@ -11,7 +11,7 @@ genfscon proc /oppoVersion                      u:object_r:proc_oppoversion:s0
 genfscon proc /fp_id                     u:object_r:proc_oppo_fp:s0
 
 # Power supply
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/ac u:object_r:sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/power_supply/ac u:object_r:vendor_sysfs_usb_supply:s0
 
 # Devinfo
 genfscon proc /devinfo        u:object_r:proc_devinfo:s0
@@ -22,3 +22,6 @@ genfscon proc /devinfo        u:object_r:proc_devinfo:s0
 # Flash
 genfscon proc /qcom_flash         u:object_r:proc_flash:s0
 genfscon proc /qcom_flash1        u:object_r:proc_flash:s0
+
+# LCD
+genfscon proc /lcd_type           u:object_r:proc_lcd:s0
