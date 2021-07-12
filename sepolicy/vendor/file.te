@@ -21,3 +21,6 @@ type proc_devinfo, fs_type, proc_type;
 
 # Flash
 type proc_flash, fs_type, proc_type;
+
+# LCD
+type proc_lcd, fs_type, proc_type;
