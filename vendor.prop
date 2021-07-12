@@ -87,10 +87,7 @@ vendor.audio.feature.snd_mon.enable=true
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.vendor.bt.aac_frm_ctl.enabled=true
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
-persist.vendor.btstack.enable.splita2dp=true
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
@@ -99,18 +96,11 @@ persist.vendor.qcom.bluetooth.scram.enabled=true
 persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
-ro.bluetooth.emb_wp_mode=true
-ro.bluetooth.library_name=libbluetooth_qti.so
-ro.bluetooth.wipower=true
 ro.vendor.bluetooth.wipower=false
-vendor.bluetooth.soc=cherokee
 vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 camera.disable_zsl_mode=1
-
-# CNE
-persist.vendor.cne.feature=1
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
@@ -136,10 +126,6 @@ vendor.display.qdcm.mode_combine=1
 vendor.display.enable_default_color_mode=1
 vendor.gralloc.disable_ubwc=0
 
-# Goodix FP
-ro.boot.flash.fucked=0
-vendor.fingerprint.cali=1
-
 # FM
 vendor.hw.fm.init=0
 
@@ -156,16 +142,6 @@ ro.hardware.keystore_desede=true
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 drm.service.enabled=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-media.stagefright.enable-aac=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-http=true
-media.stagefright.enable-player=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-scan=true
-media.stagefright.thumbnail.prefer_hw_codecs=true
-ro.media.recorder-max-base-layer-fps=60
-vendor.mm.enable.qcom_parser=16777215
 
 # PASR
 vendor.power.pasr.enabled=true
@@ -174,13 +150,9 @@ vendor.power.pasr.enabled=true
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
-DEVICE_PROVISIONED=1
-persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 persist.vendor.radio.atfwd.start=true
-persist.sys.log.radio=20|10
-persist.radio.hvolte.enable=1
 persist.vendor.radio.wait_for_pbm=1
 persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.apm_sim_not_pwdn=1
@@ -189,7 +161,6 @@ persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.procedure_bytes=SKIP
 persist.radio.multisim.config=dsds
 persist.vendor.radio.rat_on=combine
-ril.subscription.types=NV,RUIM
 ro.telephony.default_network=22,20
 ro.telephony.iwlan_operation_mode=legacy
 ro.vendor.use_data_netmgrd=true
@@ -200,9 +171,6 @@ persist.vendor.sensors.odl.adsp=true
 persist.vendor.sensors.enable.mag_filter=true
 persist.vendor.sensors.support_direct_channel=false
 persist.vendor.sensors.allow_non_default_discovery=true
-
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Wi-Fi
 wifi.aware.interface=wifi-aware0
