@@ -93,6 +93,8 @@ Return<void> FingerprintInscreen::onRelease() {
 Return<void> FingerprintInscreen::onShowFODView() {
     if (isDozeMode()) {
         set(NOTIFY_BLANK_PATH, 1);
+        set(DIMLAYER_PATH, 1);
+        set(FP_PRESS_PATH, 1);
     } else {
         set(DIMLAYER_PATH, 1);
     }
@@ -101,6 +103,7 @@ Return<void> FingerprintInscreen::onShowFODView() {
 
 Return<void> FingerprintInscreen::onHideFODView() {
     set(DIMLAYER_PATH, 0);
+    set(FP_PRESS_PATH, 0);
     return Void();
 }
 
