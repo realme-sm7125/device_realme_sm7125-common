@@ -2,3 +2,7 @@ r_dir_file(hal_audio_default, proc_oppoversion);
 
 get_prop(hal_audio_default, vendor_mpctl_prop);
 get_prop(hal_audio_default, oppo_debug_prop);
+
+# Dolby
+allow hal_audio_default hal_dms_default:binder { transfer call };
+allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
