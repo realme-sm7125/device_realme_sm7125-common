@@ -102,7 +102,7 @@ public class KeyHandler implements DeviceKeyHandler {
             SharedPreferences mPref = Utils.getSharedPreferences(mAppContext);
             switch(event.getScanCode()) {
             case GESTURE_DOUBLE_TAP_SCANCODE:
-                if (mPref.getBoolean(TouchGestures.PREF_DT2W_ENABLE, false)) {
+                if (mPref.getBoolean(TouchGestures.PREF_DT2W_ENABLE, true)) {
                     action = mPref.getString(TouchGestures.PREF_GESTURE_DOUBLE_TAP,
                             Action.ACTION_WAKE_DEVICE);
                             doHapticFeedback();
