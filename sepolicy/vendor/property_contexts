@@ -53,3 +53,6 @@ persist.oppo.wlan.                      u:object_r:oppo_wlan_prop:s0
 
 # Dolby
 persist.vendor.dolby.loglevel                 u:object_r:vendor_dolby_loglevel_prop:s0
+
+# Audio
+ro.audio.subtype                           u:object_r:vendor_audio_prop:s0
