@@ -142,6 +142,12 @@ debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 drm.service.enabled=true
 
+# NFC
+persist.sys.nfc.disPowerSave=1
+ro.camera.notify_nfc=1
+persist.sys.nfc.aid_overflow=true
+ro.hardware.nfc_nci=nqx.default
+
 # PASR
 vendor.power.pasr.enabled=true
 
