@@ -91,6 +91,10 @@ vendor.mm.enable.qcom_parser=131071983
 # Netflix
 ro.netflix.bsp_rev=Q6250-19132-1
 
+# NFC
+persist.nfc.smartcard.recorder.enable=true
+ro.nfc.port=I2C
+
 # Perf
 ro.vendor.qti.sys.fw.bservice_enable=true
 

@@ -42,6 +42,8 @@
 #include "vendor_init.h"
 #include "property_service.h"
 
+#define PROC_NFC_CHIPSET "/proc/oppo_nfc/chipset"
+
 using android::base::GetProperty;
 using std::string;
 
@@ -55,6 +57,21 @@ void property_override(string prop, string value)
         __system_property_add(prop.c_str(), prop.size(), value.c_str(), value.size());
 }
 
+void check_nfc_support()
+{
+    std::ifstream procfile(PROC_NFC_CHIPSET);
+    std::string chipset;
+
+    getline(procfile, chipset);
+
+     LOG(INFO) << "oppo_nfc : chipset " << chipset;
+
+    if (chipset != "NULL") {
+        property_override("ro.boot.product.hardware.sku", "nfc");
+    }
+}
+
 void vendor_load_properties()
 {
+    check_nfc_support();
 }
