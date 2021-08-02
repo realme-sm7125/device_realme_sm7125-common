@@ -21,6 +21,7 @@
 #include <android-base/logging.h>
 #include <fstream>
 #include <cmath>
+#include <thread>
 
 #define FP_PRESS_PATH "/sys/kernel/oppo_display/notify_fppress"
 #define DIMLAYER_PATH "/sys/kernel/oppo_display/dimlayer_hbm"
@@ -96,7 +97,10 @@ Return<void> FingerprintInscreen::onShowFODView() {
         set(DIMLAYER_PATH, 1);
         set(FP_PRESS_PATH, 1);
     } else {
-        set(DIMLAYER_PATH, 1);
+        std::thread([]() {
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+            set(DIMLAYER_PATH, 1);
+        }).detach();
     }
     return Void();
 }
