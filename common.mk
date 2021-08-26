@@ -146,8 +146,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125 \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.realme_sm7125
+    android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
