@@ -22,13 +22,4 @@
 <resources>
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
-
-    <!-- Color of the FOD view -->
-    <color name="config_fodColor">#00ffffff</color>
-
-    <!-- The bottom margin of the keyguard security container -->
-    <dimen name="kg_security_container_min_bottom_margin">469px</dimen>
-
-    <!-- Allow devices override audio panel location to the left side -->
-    <bool name="config_audioPanelOnLeftSide">true</bool>
 </resources>
