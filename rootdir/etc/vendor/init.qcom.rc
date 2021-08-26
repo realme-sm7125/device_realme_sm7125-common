@@ -27,9 +27,13 @@
 
 import /vendor/etc/init/hw/init.qti.ufs.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
-import /vendor/etc/init/hw/init.qcom.test.rc
+
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
+#ifdef OPLUS_BUG_STABILITY
+#Kai.Huang@BSP.Kernel.Stability 2020/2/12  Case:04451596 solve the testPocCVE_2016_6753 fail 
+import /vendor/etc/init/hw/init.qcom.test.rc
+#endif
 #ifdef OPLUS_FEATURE_DISPLAY
 #su.duan@MULTIMEDIA.DISPLAY.FEATURE, 2020/08/17, Add for import init.oppo.display.rc
 import /vendor/etc/init/hw/init.oppo.display.rc
@@ -45,13 +49,15 @@ import /odm/etc/init/init.oppo.reserve.rc
 
 #ifdef VENDOR_EDIT
 #Jianchao.Shi@BSP.CHG.Basic 2018/03/20, sjc Add for oppo devices
-import /vendor/etc/init/hw/init.oppo.rc
+import init.oppo.rc
 #endif
 
 #ifdef VENDOR_EDIT
 #shanliangliang@BSP.CHG.Misc 2020/10/19 add for init.oppo.vendor.motor.rc
 import /vendor/etc/init/hw/init.oppo.vendor.motor.rc
 #endif
+
+import /vendor/etc/init/hw/init.sm7125.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -640,6 +646,17 @@ service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     group wifi
     disabled
     oneshot
+
+service wigignpt /vendor/bin/wigignpt
+    class hal
+    socket wigig/wigignpt stream 660 system wifi
+    user system
+    group wifi
+    capabilities NET_ADMIN
+    disabled
+
+on property:persist.vendor.wigig.npt.enable=1
+    start wigignpt
 
 service vendor.sensingdaemon /vendor/bin/sensingdaemon
     class hal
