@@ -124,9 +124,6 @@ on boot
 #endif
     write /dev/cpuset/system-background/cpus 0-7
 
-    chown system system /sys/class/leds/vibrator/vmax_mv
-    chmod 0644 /sys/class/leds/vibrator/vmax_mv
-
 # Add a cpuset for the camera daemon
 # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
@@ -443,3 +440,9 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 
 on property:vendor.dcvs.prop=1
    start dcvs-sh
+
+#FPC_fingerprint
+chown system system /sys/bus/platform/devices/soc:fpc1020/irq
+chown system system /sys/bus/platform/devices/soc:fpc1020/irq_enable
+chown system system /sys/bus/platform/devices/soc:fpc1020/wakelock_enable
+
