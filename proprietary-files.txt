@@ -813,17 +813,17 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NFC
-odm/etc/init/init.SN100x.nfc.rc
-vendor/etc/libnfc-nci.conf
-odm/etc/libnfc-nxp-pnscr.conf
-odm/etc/libnfc-nxp-pnscr.conf:odm/etc/libnfc-nxp.conf
-odm/etc/libnfc-nxp-pnscr.conf:vendor/etc/libnfc-nxp.conf
-odm/lib/libpn553_fw.so
-odm/lib/libpn557_fw.so
-odm/lib/libpnscr2.so
-odm/lib/libsn100u_fw.so
-odm/lib64/libpnscr2.so
+# NFC - from RMX2170EU
+odm/etc/init/init.SN100x.nfc.rc|0370b2ce79223865f00bbb6228a06f30b169980e
+vendor/etc/libnfc-nci.conf|1b8111586cfc50afdc1cefd050984bbbb7f60d40
+odm/etc/libnfc-nxp-pnscr.conf|c9bbf87032cf73dc0b76793a15eff838f11ebf84
+odm/etc/libnfc-nxp-pnscr.conf:odm/etc/libnfc-nxp.conf|c9bbf87032cf73dc0b76793a15eff838f11ebf84
+odm/etc/libnfc-nxp-pnscr.conf:vendor/etc/libnfc-nxp.conf|c9bbf87032cf73dc0b76793a15eff838f11ebf84
+odm/lib/libpn553_fw.so|a8e29cc3ebb2e0df0fb505fc2da9c69a015680fb
+odm/lib/libpn557_fw.so|5fd4d17960d258563557d47d70c4d9d11a79fd15
+odm/lib/libpnscr2.so|eed3e854c85eefcc4da4a3df283a95d249497fa8
+odm/lib/libsn100u_fw.so|4adda2c9449cdc8f66fc3c653153f8b69c7dc78c
+odm/lib64/libpnscr2.so|36ffef654ac4918d9391a0d85d1d5378c56fe819
 
 # Oppo Init rc
 odm/etc/init/init.network.rc
