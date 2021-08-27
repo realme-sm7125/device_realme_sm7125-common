@@ -1267,7 +1267,6 @@ vendor/etc/sensors/config/atoll_lsm6dst_0.json
 vendor/etc/sensors/config/atoll_dynamic_sensors.json
 vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sns_dae.json
-vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_low_lat_stream_stub.so
