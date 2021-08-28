@@ -17,6 +17,7 @@
 on boot
     chown system system /sys/kernel/oppo_display/dump_info
     chown system system /sys/kernel/oppo_display/hbm
+    chown system system /sys/kernel/oppo_display/cabc
     chown system system /sys/kernel/oppo_display/LCM_CABC
     chown system system /sys/kernel/oppo_display/audio_ready
     chown system system /sys/kernel/oppo_display/seed
@@ -43,6 +44,7 @@ on boot
 
     chmod 0666 /sys/kernel/oppo_display/dump_info
     chmod 0666 /sys/kernel/oppo_display/hbm
+    chmod 0666 /sys/kernel/oppo_display/cabc
     chmod 0666 /sys/kernel/oppo_display/LCM_CABC
     chmod 0666 /sys/kernel/oppo_display/audio_ready
     chmod 0666 /sys/kernel/oppo_display/seed
