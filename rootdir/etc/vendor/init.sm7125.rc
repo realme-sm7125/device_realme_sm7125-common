@@ -1,8 +1,4 @@
-on init
-    # Update Fastchg FW
-    chmod 0660 /proc/fastchg_fw_update
-    chown system system /proc/fastchg_fw_update
-    write /proc/fastchg_fw_update 1
+import /vendor/etc/init/hw/init.${ro.build.product}.rc
 
 on boot
     # Disable edge limit control interface
@@ -24,10 +20,6 @@ on boot
     # OTG
     chown system system /sys/class/power_supply/usb/otg_switch
     chmod 0644 /sys/class/power_supply/usb/otg_switch
-
-on property:ro.build.product=RMX2170
-    # Fix for AOD
-    write /sys/kernel/oppo_display/aod_area "290 414 699 1270 0 1 0 255"
 
 on property:ro.boot.product.hardware.sku=nfc
     start secure_element_hal_service
