@@ -567,4 +567,6 @@
     <!-- Full screen aspect ratio -->
     <item name="config_screenAspectRatio" format="float" type="dimen">2.222</item>
 
+    <!-- Shows the required view for in-display fingerprint -->
+    <bool name="config_supportsInDisplayFingerprint">true</bool>
 </resources>
