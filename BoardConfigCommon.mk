@@ -25,6 +25,7 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -103,8 +104,8 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := RMX2170_defconfig
 TARGET_KERNEL_SOURCE := kernel/realme/sm7125
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+#TARGET_KERNEL_ADDITIONAL_FLAGS := \
+#    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=default

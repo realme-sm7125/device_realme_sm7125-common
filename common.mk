@@ -247,7 +247,7 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage \
-    $(LOCAL_PATH)/overlay-evolution
+    $(LOCAL_PATH)/overlay-octavi
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -402,5 +402,5 @@ PRODUCT_PACKAGES += \
     WfdCommon
 
 # Product namespace
-PRODUCT_BOARD_PLATFORM := atoll
+#PRODUCT_BOARD_PLATFORM := atoll
 PRODUCT_USES_QCOM_HARDWARE := true
