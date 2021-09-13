@@ -25,4 +25,6 @@
        have distinct intensity levels -->
   <bool name="config_vibration_supports_multiple_intensities">true</bool>
 
+  <!-- Battery health -->
+  <bool name="config_supportBatteryHealth">false</bool>
 </resources>
