@@ -60,7 +60,7 @@ import org.aospextended.device.util.Utils;
 
 public class RealmeParts extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = Utils.DEBUG;
     private static final String TAG = "RealmeParts";
 
     public static final String PREF_OTG = "otg";

@@ -24,13 +24,15 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
+import org.aospextended.device.util.Utils;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class ProximitySensor implements SensorEventListener {
 
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = Utils.DEBUG;
     private static final String TAG = "ProximitySensor";
 
     // Maximum time for the hand to cover the sensor: 1s

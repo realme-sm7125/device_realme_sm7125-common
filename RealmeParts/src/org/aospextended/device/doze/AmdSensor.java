@@ -25,13 +25,15 @@ import android.hardware.SensorManager;
 import android.os.SystemClock;
 import android.util.Log;
 
+import org.aospextended.device.util.Utils;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class AmdSensor implements SensorEventListener {
 
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = Utils.DEBUG;
     private static final String TAG = "AmdSensor";
 
     private static final String AMD_SENSOR = "qti.sensor.amd";

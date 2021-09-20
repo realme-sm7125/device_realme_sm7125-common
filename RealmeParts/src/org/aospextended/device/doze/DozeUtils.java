@@ -27,6 +27,8 @@ import android.provider.Settings;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
+import org.aospextended.device.util.Utils;
+
 import android.hardware.display.AmbientDisplayConfiguration;
 
 import static android.provider.Settings.Secure.DOZE_ALWAYS_ON;
@@ -35,7 +37,7 @@ import static android.provider.Settings.Secure.DOZE_ENABLED;
 public final class DozeUtils {
 
     private static final String TAG = "DozeUtils";
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = Utils.DEBUG;
 
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
 
