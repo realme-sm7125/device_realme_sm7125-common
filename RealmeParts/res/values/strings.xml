@@ -181,4 +181,9 @@
     <string name="otg_title">Enable OTG</string>
     <string name="otg_summary">Enable USB on-the-go device</string>
 
+    <!-- Double Tap to check phone  strings-->
+    <string name="double_tap_gesture_title">Double tap to check phone</string>
+    <string name="double_tap_gesture_summary">Double tap to show notifications</string>
+
+
 </resources>

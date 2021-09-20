@@ -48,6 +48,7 @@ import com.android.internal.util.ArrayUtils;
 import org.aospextended.device.util.Action;
 import org.aospextended.device.util.Action;
 import org.aospextended.device.util.Utils;
+import org.aospextended.device.doze.DozeUtils;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.text.TextUtils;
@@ -86,12 +87,6 @@ public class KeyHandler implements DeviceKeyHandler {
         mEventHandler = new EventHandler();
 
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-
-        try {
-            mAppContext = mContext.createPackageContext(
-                    "org.aospextended.device", Context.CONTEXT_IGNORE_SECURITY);
-        } catch (NameNotFoundException e) {
-        }
     }
 
     private class EventHandler extends Handler {
@@ -99,13 +94,20 @@ public class KeyHandler implements DeviceKeyHandler {
         public void handleMessage(Message msg) {
             KeyEvent event = (KeyEvent) msg.obj;
             String action = null;
-            SharedPreferences mPref = Utils.getSharedPreferences(mAppContext);
+            SharedPreferences mPref = mAppContext.getSharedPreferences("org.aospextended.device_preferences",
+                    Context.MODE_PRIVATE | Context.MODE_MULTI_PROCESS);
             switch(event.getScanCode()) {
             case GESTURE_DOUBLE_TAP_SCANCODE:
                 if (mPref.getBoolean(TouchGestures.PREF_DT2W_ENABLE, true)) {
                     action = mPref.getString(TouchGestures.PREF_GESTURE_DOUBLE_TAP,
                             Action.ACTION_WAKE_DEVICE);
                             doHapticFeedback();
+
+                    if (mPref.getBoolean(DozeUtils.GESTURE_DOUBLE_TAP, true)) {
+                        action = null;
+                        DozeUtils.launchDozePulse(Utils.getAppContext(mContext));
+                        doHapticFeedback();
+                    }
                 }
                 break;
             case GESTURE_W_SCANCODE:
