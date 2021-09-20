@@ -19,7 +19,10 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.util.Slog;
+
+import androidx.preference.PreferenceManager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -45,11 +48,20 @@ public class Utils {
     private static final String SETTINGS_METADATA_NAME = "com.android.settings";
 
     public static SharedPreferences getSharedPreferences(Context context) {
-        return context.getSharedPreferences(PREFERENCES,
-                Context.MODE_PRIVATE | Context.MODE_MULTI_PROCESS);
+        return PreferenceManager.getDefaultSharedPreferences(getAppContext(context));
     }
 
-	public static int getIntSystem(Context context, ContentResolver cr, String name, int def) {
+    public static Context getAppContext(Context context) {
+        try {
+            return context.createPackageContext(
+                    "org.aospextended.device", Context.CONTEXT_IGNORE_SECURITY);
+        } catch (NameNotFoundException e) {
+        }
+        return context;
+    }
+
+
+    public static int getIntSystem(Context context, ContentResolver cr, String name, int def) {
         int ret = getInt(context, name, def);
         return ret;
     }
