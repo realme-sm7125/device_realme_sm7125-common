@@ -37,7 +37,7 @@ import java.util.List;
 public class Utils {
 
     public static final String TAG = "RealmeParts";
-    public static final boolean DEBUG = true;
+    public static final boolean DEBUG = false;
 
     public static final String PREFERENCES = "RealmePartsPreferences";
     public static final String AMBIENT_GESTURE_HAPTIC_FEEDBACK =
