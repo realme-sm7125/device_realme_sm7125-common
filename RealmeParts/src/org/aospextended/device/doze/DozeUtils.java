@@ -48,6 +48,7 @@ public final class DozeUtils {
     protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
     protected static final String GESTURE_RAISE_TO_WAKE_KEY = "gesture_raise_to_wake";
+    public static final String GESTURE_DOUBLE_TAP = "gesture_double_tap_to_check_phone";
 
     public static void startService(Context context) {
         if (DEBUG) Log.d(TAG, "Starting service");
@@ -90,7 +91,7 @@ public final class DozeUtils {
                 DOZE_ENABLED, 1) != 0;
     }
 
-    protected static void launchDozePulse(Context context) {
+    public static void launchDozePulse(Context context) {
         if (DEBUG) Log.d(TAG, "Launch doze pulse");
         context.sendBroadcastAsUser(new Intent(DOZE_INTENT),
                 new UserHandle(UserHandle.USER_CURRENT));
@@ -135,9 +136,12 @@ public final class DozeUtils {
         return isGestureEnabled(context, GESTURE_POCKET_KEY);
     }
 
+    protected static boolean isDoubleTapEnabled(Context context) {
+        return isGestureEnabled(context, GESTURE_DOUBLE_TAP);
+    }
     public static boolean sensorsEnabled(Context context) {
         return isPickUpEnabled(context) || isHandwaveGestureEnabled(context)
-                || isPocketGestureEnabled(context) ||  isRaiseToWakeEnabled(context);
+                || isPocketGestureEnabled(context) ||  isRaiseToWakeEnabled(context) || isDoubleTapEnabled(context);
     }
 
     protected static Sensor getSensor(SensorManager sm, String type) {

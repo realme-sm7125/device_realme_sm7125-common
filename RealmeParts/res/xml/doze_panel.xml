@@ -43,6 +43,13 @@
             android:summary="@string/raise_to_wake_gesture_summary"
             android:title="@string/raise_to_wake_gesture_title" />
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:disableDependentsState="true"
+            android:key="gesture_double_tap_to_check_phone"
+            android:summary="@string/double_tap_gesture_summary"
+            android:title="@string/double_tap_gesture_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
