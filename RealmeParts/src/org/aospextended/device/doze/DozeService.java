@@ -25,9 +25,11 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.util.Log;
 
+import org.aospextended.device.util.Utils;
+
 public class DozeService extends Service {
     private static final String TAG = "DozeService";
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = Utils.DEBUG;
 
     private ProximitySensor mProximitySensor;
     private AmdSensor mAmdSensor;

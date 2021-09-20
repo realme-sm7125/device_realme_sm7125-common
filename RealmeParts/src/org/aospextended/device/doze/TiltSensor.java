@@ -27,13 +27,15 @@ import android.os.PowerManager.WakeLock;
 import android.os.SystemClock;
 import android.util.Log;
 
+import org.aospextended.device.util.Utils;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class TiltSensor implements SensorEventListener {
 
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = Utils.DEBUG;
     private static final String TAG = "TiltSensor";
 
     private static final String TILT_SENSOR = "android.sensor.tilt_detector";
