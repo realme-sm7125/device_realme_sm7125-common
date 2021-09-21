@@ -87,6 +87,8 @@ public class KeyHandler implements DeviceKeyHandler {
         mEventHandler = new EventHandler();
 
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+
+        mAppContext = Utils.getAppContext(mContext);
     }
 
     private class EventHandler extends Handler {
@@ -94,8 +96,11 @@ public class KeyHandler implements DeviceKeyHandler {
         public void handleMessage(Message msg) {
             KeyEvent event = (KeyEvent) msg.obj;
             String action = null;
+
+            // Utils.getSharedPreferences does not work here
             SharedPreferences mPref = mAppContext.getSharedPreferences("org.aospextended.device_preferences",
                     Context.MODE_PRIVATE | Context.MODE_MULTI_PROCESS);
+
             switch(event.getScanCode()) {
             case GESTURE_DOUBLE_TAP_SCANCODE:
                 if (mPref.getBoolean(TouchGestures.PREF_DT2W_ENABLE, true)) {
@@ -103,9 +108,9 @@ public class KeyHandler implements DeviceKeyHandler {
                             Action.ACTION_WAKE_DEVICE);
                             doHapticFeedback();
 
-                    if (mPref.getBoolean(DozeUtils.GESTURE_DOUBLE_TAP, true)) {
+                    if (mPref.getBoolean(DozeUtils.GESTURE_DOUBLE_TAP, false)) {
                         action = null;
-                        DozeUtils.launchDozePulse(Utils.getAppContext(mContext));
+                        DozeUtils.launchDozePulse(mAppContext);
                         doHapticFeedback();
                     }
                 }
