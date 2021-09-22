@@ -266,10 +266,6 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti.vendor
 
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.safailnet.rc
-
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
