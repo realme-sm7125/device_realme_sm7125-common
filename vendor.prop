@@ -178,5 +178,8 @@ persist.vendor.sensors.enable.mag_filter=true
 persist.vendor.sensors.support_direct_channel=false
 persist.vendor.sensors.allow_non_default_discovery=true
 
+# Usb
+persist.vendor.usb.config.extra=none
+
 # Wi-Fi
 wifi.aware.interface=wifi-aware0
