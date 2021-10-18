@@ -55,6 +55,9 @@ ro.surface_flinger.has_wide_color_display=false
 ro.vendor.display.sensortype=2
 ro.vendor.display.svi=1
 
+# Do not write xml files in binary format
+persist.sys.binary_xml=false
+
 # DPM
 persist.dpm.feature=1
 
@@ -124,3 +127,4 @@ persist.sys.wfd.virtual=0
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
 ro.zram.periodic_wb_delay_hours=24
+
