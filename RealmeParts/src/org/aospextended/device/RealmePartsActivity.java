@@ -28,6 +28,8 @@ import android.view.MenuItem;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
+import org.aospextended.device.R;
+
 public class RealmePartsActivity extends Activity {
 
     private RealmeParts mRealmePartsFragment;
@@ -36,13 +38,15 @@ public class RealmePartsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.realme_parts_activity);
 
-        Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
+        setTitle("RealmeParts");
+
+        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
         if (fragment == null) {
             mRealmePartsFragment = new RealmeParts();
             getFragmentManager().beginTransaction()
-                .add(android.R.id.content, mRealmePartsFragment)
+                .add(R.id.content_frame, mRealmePartsFragment)
                 .commit();
         } else {
             mRealmePartsFragment = (RealmeParts) fragment;
@@ -60,5 +64,4 @@ public class RealmePartsActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
- 
 }
