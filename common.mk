@@ -305,8 +305,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/post_install.sh:install/bin/post_install.sh
 
 # RealmeParts
-PRODUCT_PACKAGES += \
-    RealmeParts
+#PRODUCT_PACKAGES += \
+#    RealmeParts
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
