@@ -27,3 +27,6 @@ ro.incremental.enable=1
 ro.iorapd.enable=true
 iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
+
+## One handed mode
+ro.support_one_handed_mode=true
