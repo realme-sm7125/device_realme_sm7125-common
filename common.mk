@@ -342,7 +342,12 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    kernel/realme/sm7125
+    kernel/realme/sm7125 \
+    vendor/qcom/opensource/data-ipa-cfg-mgr \
+    hardware/qcom-caf/sm8150/audio \
+    hardware/qcom-caf/sm8150/display \
+    hardware/qcom-caf/sm8150/media \
+    hardware/qcom-caf/common
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -432,3 +437,56 @@ PRODUCT_PACKAGES += \
 # Product namespace
 PRODUCT_BOARD_PLATFORM := atoll
 PRODUCT_USES_QCOM_HARDWARE := true
+
+# Packages for A12
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.2.vendor \
+    android.system.net.netd@1.1.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.0.vendor \
+    android.hardware.keymaster@3.0.vendor \
+    android.hardware.keymaster@4.0.vendor \
+    android.hardware.keymaster@4.1.vendor \
+    android.hardware.gatekeeper@1.0 \
+    android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service \
+    android.hardware.drm@1.0.vendor \
+    android.hardware.drm@1.1.vendor \
+    android.hardware.drm@1.2.vendor \
+    android.hardware.drm@1.3.vendor \
+    android.frameworks.displayservice@1.0 \
+    android.frameworks.displayservice@1.0.vendor \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.allocator@3.0-impl \
+    android.hardware.graphics.allocator@4.0-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    audio.bluetooth.default \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.audio@2.0-impl \
+    liba2dpoffload \
+    libbthost_if \
+    libhdmiedid \
+    libhfp \
+    libldacBT_dec \
+    libsndmonitor \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor
+
+# Broadcastradio
+PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl
+
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.2 \
+    android.hardware.neuralnetworks@1.2.vendor
