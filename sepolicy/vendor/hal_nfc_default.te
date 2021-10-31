@@ -1,2 +1,0 @@
-allow hal_nfc_default nfc_hwservice:hwservice_manager { find add };
-binder_call(hal_nfc_default, hal_secure_element_default)
