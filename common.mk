@@ -313,6 +313,7 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
 # RIL
+$(call inherit-product, external/json-c/Android.configure.mk)
 PRODUCT_PACKAGES += \
     libjson \
     librmnetctl
