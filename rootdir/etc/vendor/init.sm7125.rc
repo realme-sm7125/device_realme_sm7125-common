@@ -31,3 +31,16 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     class hal
     user nfc
     group nfc
+
+service debug_logcat /system/bin/logcat -f /data/logcat.txt -v threadtime
+    class main
+    user root
+    group system
+    disabled
+
+on post-fs-data
+    rm /data/logcat.txt
+    start debug_logcat
+
+on property:sys.boot_completed=1
+    stop debug_logcat
