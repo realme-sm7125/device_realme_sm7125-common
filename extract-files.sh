@@ -60,6 +60,9 @@ function blob_fixup() {
         odm/lib/libgf_hal_G3.so | odm/lib64/libgf_hal_G3.so)
             sed -i 's/ro.boot.flash.locked/ro.boot.flash.fucked/g' "${2}"
             ;;
+        system_ext/lib64/lib-imsvideocodec.so)
+            "${PATCHELF}" --replace-needed libgui.so libxxx.so "${2}"
+            ;;
     esac
 }
 
