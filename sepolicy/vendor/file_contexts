@@ -1,6 +1,3 @@
-# FOD Hal
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.realme_sm7125    u:object_r:hal_lineage_fod_default_exec:s0
-
 # Goodix Fingerprint device
 /dev/goodix_fp                                                                                           u:object_r:goodix_device:s0
 
