@@ -13,22 +13,57 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.1-service.realme_sm7125"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.realme_sm7125"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.realme_sm7125"
 
+#include <android-base/logging.h>
+#include <android-base/properties.h>
 #include <hardware/hardware.h>
 #include <hardware/fingerprint.h>
 #include "BiometricsFingerprint.h"
-
+#include <fstream>
+#include <cmath>
 #include <inttypes.h>
 #include <unistd.h>
+#include <thread>
+
+#define FP_PRESS_PATH "/sys/kernel/oppo_display/notify_fppress"
+#define DIMLAYER_PATH "/sys/kernel/oppo_display/dimlayer_hbm"
+#define POWER_STATUS_PATH "/sys/kernel/oppo_display/power_status"
+#define NOTIFY_BLANK_PATH "/sys/kernel/oppo_display/notify_panel_blank"
+#define PRJNAME_PATH "/proc/oplusVersion/prjName"
 
 namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_1 {
+namespace V2_3 {
 namespace implementation {
+
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+    LOG(INFO) << "wrote path: " << path << ", value: " << value << "\n";
+}
+
+template <typename T>
+static T get(const std::string& path, const T& def) {
+    std::ifstream file(path);
+    T result;
+
+    file >> result;
+    LOG(INFO) << "read path: " << path << ", value: " << result << "\n";
+    return file.fail() ? def : result;
+}
+
+static std::string get(const std::string& path, const std::string& def) {
+    std::ifstream file(path);
+    std::string result;
+    file >> result;
+    LOG(INFO) << "read path: " << path << ", value: " << result << "\n";
+    return file.fail() ? def : result;
+}
 
 BiometricsFingerprint::BiometricsFingerprint() {
     mOplusBiometricsFingerprint = vendor::oplus::hardware::biometrics::fingerprint::V2_1::IBiometricsFingerprint::getService();
@@ -180,8 +215,59 @@ Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId, 
     return OplusToAOSPRequestStatus(mOplusBiometricsFingerprint->authenticate(operationId, gid));
 }
 
+Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
+    if (get(PRJNAME_PATH, "") == "206B1") {
+        return true;
+    }
+    LOG(INFO) << "sagar : device : " << get(PRJNAME_PATH, "");
+    return false;
+}
+
+Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
+    if (isUdfps(0)) {
+        if (isDozeMode()) {
+            set(NOTIFY_BLANK_PATH, 1);
+            set(DIMLAYER_PATH, 1);
+            set(FP_PRESS_PATH, 1);
+        } else {
+            std::thread([]() {
+                std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+                set(DIMLAYER_PATH, 1);
+            }).detach();
+        }
+    }
+    return Void();
+}
+
+Return<void> BiometricsFingerprint::onFingerUp() {
+    if (isUdfps(0)) {
+        set(FP_PRESS_PATH, 0);
+    }
+    return Void();
+}
+
+Return<bool> BiometricsFingerprint::isDozeMode() {
+    return (get(POWER_STATUS_PATH, 0) == 1) || (get(POWER_STATUS_PATH, 0) == 3);
+}
+
+Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
+    if (isUdfps(0)) {
+        set(DIMLAYER_PATH, 1);
+        set(FP_PRESS_PATH, 1);
+    }
+    return Void();
+}
+
+Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
+    if (isUdfps(0)) {
+        set(DIMLAYER_PATH, 0);
+        set(FP_PRESS_PATH, 0);
+    }
+    return Void();
+}
+
 } // namespace implementation
-}  // namespace V2_1
+}  // namespace V2_3
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware
