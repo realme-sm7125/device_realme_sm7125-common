@@ -111,6 +111,7 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/realme/sm7125
 #TARGET_KERNEL_ADDITIONAL_FLAGS := \
 #    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_CONFIG := atoll_defconfig
 
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=default
