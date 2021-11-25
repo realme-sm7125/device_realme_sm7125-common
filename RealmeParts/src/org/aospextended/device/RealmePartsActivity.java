@@ -28,17 +28,16 @@ import android.view.MenuItem;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
-import org.aospextended.device.R;
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
 
-public class RealmePartsActivity extends Activity {
+public class RealmePartsActivity extends CollapsingToolbarBaseActivity {
 
     private RealmeParts mRealmePartsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.realme_parts_activity);
 
         setTitle("RealmeParts");
 
