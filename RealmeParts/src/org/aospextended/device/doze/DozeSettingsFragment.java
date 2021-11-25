@@ -42,11 +42,13 @@ import androidx.preference.SwitchPreference;
 import org.aospextended.device.R;
 import org.aospextended.device.util.Utils;
 
-public class DozeSettingsFragment extends PreferenceFragment implements OnPreferenceChangeListener,
-        CompoundButton.OnCheckedChangeListener {
+import com.android.settingslib.widget.MainSwitchPreference;
+import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
-    private TextView mTextView;
-    private View mSwitchBar;
+public class DozeSettingsFragment extends PreferenceFragment implements OnPreferenceChangeListener,
+        OnMainSwitchChangeListener {
+
+    private MainSwitchPreference mSwitchBar;
 
     private SwitchPreference mAlwaysOnDisplayPreference;
 
@@ -70,6 +72,10 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
 
         boolean dozeEnabled = DozeUtils.isDozeEnabled(getActivity());
 
+        mSwitchBar = (MainSwitchPreference) findPreference(DozeUtils.DOZE_ENABLE);
+        mSwitchBar.addOnSwitchChangeListener(this);
+        mSwitchBar.setChecked(dozeEnabled);
+
         mAlwaysOnDisplayPreference = (SwitchPreference) findPreference(DozeUtils.ALWAYS_ON_DISPLAY);
         mAlwaysOnDisplayPreference.setEnabled(dozeEnabled);
         mAlwaysOnDisplayPreference.setChecked(DozeUtils.isAlwaysOnEnabled(getActivity()));
@@ -83,7 +89,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         mPickUpPreference = (SwitchPreference) findPreference(DozeUtils.GESTURE_PICK_UP_KEY);
         mPickUpPreference.setEnabled(dozeEnabled);
         mPickUpPreference.setOnPreferenceChangeListener(this);
-
 
         mDoubleTapPreference = (SwitchPreference) findPreference(DozeUtils.GESTURE_DOUBLE_TAP);
         mDoubleTapPreference.setEnabled(dozeEnabled);
@@ -117,36 +122,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        final View view = LayoutInflater.from(getContext()).inflate(R.layout.doze,
-                container, false);
-        ((ViewGroup) view).addView(super.onCreateView(inflater, container, savedInstanceState));
-        return view;
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        boolean dozeEnabled = DozeUtils.isDozeEnabled(getActivity());
-
-        mTextView = view.findViewById(R.id.switch_text);
-        mTextView.setText(getString(dozeEnabled ?
-                R.string.switch_bar_on : R.string.switch_bar_off));
-
-        mSwitchBar = view.findViewById(R.id.switch_bar);
-        Switch switchWidget = mSwitchBar.findViewById(android.R.id.switch_widget);
-        switchWidget.setChecked(dozeEnabled);
-        switchWidget.setOnCheckedChangeListener(this);
-        mSwitchBar.setActivated(dozeEnabled);
-        mSwitchBar.setOnClickListener(v -> {
-            switchWidget.setChecked(!switchWidget.isChecked());
-            mSwitchBar.setActivated(switchWidget.isChecked());
-        });
-    }
-
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (DozeUtils.ALWAYS_ON_DISPLAY.equals(preference.getKey())) {
             DozeUtils.enableAlwaysOn(getActivity(), (Boolean) newValue);
@@ -158,12 +133,11 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
     }
 
     @Override
-    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+    public void onSwitchChanged(Switch switchView, boolean isChecked) {
         DozeUtils.enableDoze(getActivity(), isChecked);
         DozeUtils.checkDozeService(getActivity());
 
-        mTextView.setText(getString(isChecked ? R.string.switch_bar_on : R.string.switch_bar_off));
-        mSwitchBar.setActivated(isChecked);
+        mSwitchBar.setChecked(isChecked);
 
         if (!isChecked) {
             DozeUtils.enableAlwaysOn(getActivity(), false);
