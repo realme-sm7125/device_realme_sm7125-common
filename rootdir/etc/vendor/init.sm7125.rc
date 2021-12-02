@@ -1,5 +1,11 @@
 import /vendor/etc/init/hw/init.${ro.build.product}.rc
 
+on init
+    # Enable decimal charging
+    chmod 0666 /proc/ui_soc_decimal
+    chown system system /proc/ui_soc_decimal
+    write /proc/ui_soc_decimal 1
+
 on boot
     # Disable edge limit control interface
     chmod 0660 /proc/touchpanel/oplus_tp_limit_enable
