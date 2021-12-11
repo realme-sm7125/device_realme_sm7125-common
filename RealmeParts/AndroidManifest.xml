@@ -81,6 +81,17 @@
                  android:permission="RealmeDozeService">
         </service>
 
+        <service
+            android:name=".display.DcDimmingTileService"
+            android:icon="@drawable/ic_dc_tile"
+            android:label="@string/dc_dimming_enable_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:label="@string/ambient_display_title">
@@ -94,6 +105,14 @@
             android:name=".camerahelper.CameraService"
             android:enabled="true" />
 
+        <activity
+            android:name="org.aospextended.device.display.DcDimmingSettingsActivity"
+            android:label="@string/dc_dimming_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

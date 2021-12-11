@@ -22,6 +22,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.SystemProperties;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 
@@ -33,8 +34,12 @@ import org.aospextended.device.util.Utils;
 import org.aospextended.device.doze.DozeUtils;
 import org.aospextended.device.vibration.VibratorStrengthPreference;
 import org.aospextended.device.camerahelper.CameraService;
+import org.aospextended.device.utils.FileUtils;
 
 public class BootReceiver extends BroadcastReceiver {
+
+    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
+    private static final String DC_DIMMING_NODE = "/sys/kernel/oppo_display/dimlayer_bl_en";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -54,6 +59,11 @@ public class BootReceiver extends BroadcastReceiver {
             context.startService(new Intent(context, CameraService.class));
         }
 //        VibratorStrengthPreference.restore(context);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
+        try {
+            FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
+        } catch(Exception e) {}
     }
 
     private void enableComponent(Context context, String component) {

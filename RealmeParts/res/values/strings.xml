@@ -175,9 +175,10 @@
     <string name="raise_to_wake_gesture_title">Raise to wake</string>
     <string name="raise_to_wake_gesture_summary">Wake up the device instead of pulsing notification</string>
 
+    <!-- Misc -->
+    <string name="misc_title">Tweaks</string>
   
     <!-- OTG strings-->
-    <string name="otg">OTG</string>
     <string name="otg_title">Enable OTG</string>
     <string name="otg_summary">Enable USB on-the-go device</string>
 
@@ -185,5 +186,10 @@
     <string name="double_tap_gesture_title">Double tap to check phone</string>
     <string name="double_tap_gesture_summary">Double tap to show notifications</string>
 
-
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_title">Anti-flicker</string>
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_summary">Fixes screen flickering</string>
+    <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
 </resources>

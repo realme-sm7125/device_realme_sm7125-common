@@ -42,6 +42,8 @@ import androidx.preference.TwoStatePreference;
 import org.aospextended.device.gestures.TouchGestures;
 import org.aospextended.device.gestures.TouchGesturesActivity;
 import org.aospextended.device.doze.DozeSettingsActivity;
+import org.aospextended.device.display.DcDimmingSettingsFragment;
+import org.aospextended.device.display.DcDimmingSettingsActivity;
 import org.aospextended.device.vibration.VibratorStrengthPreference;
 
 import java.text.DateFormat;
@@ -71,6 +73,7 @@ public class RealmeParts extends PreferenceFragment implements
     private Preference mDozePref;
     private Preference mGesturesPref;
     private SwitchPreference mOTG;
+    private Preference mDCPref;
     private VibratorStrengthPreference mVibratorStrength;
 
     @Override
@@ -107,6 +110,17 @@ public class RealmeParts extends PreferenceFragment implements
         mOTG = (SwitchPreference) findPreference(PREF_OTG);
         mOTG.setChecked(mPrefs.getBoolean(PREF_OTG, false));
         mOTG.setOnPreferenceChangeListener(this);
+
+
+       mDCPref = findPreference("dc_dimming");
+       mDCPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Intent intent = new Intent(getContext(), DcDimmingSettingsActivity.class);
+                startActivity(intent);
+                return true;
+           }
+       });
 
 /*        PreferenceCategory vib_strength = (PreferenceCategory) getPreferenceScreen()
                  .findPreference("vib_strength_category");

@@ -25,14 +25,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="otg_category"
-        android:title="@string/otg">
+        android:key="misc_category"
+        android:title="@string/misc_title">
 
         <SwitchPreference
             android:key="otg"
             android:summary="@string/otg_summary"
             android:title="@string/otg_title"
             android:icon="@drawable/ic_otg" />
+
+        <Preference
+            android:key="dc_dimming"
+            android:icon="@drawable/ic_dcdimming"
+            android:title="@string/dc_dimming_title"
+            android:summary="@string/dc_dimming_summary" />
     </PreferenceCategory>
 <!--
     <PreferenceCategory
