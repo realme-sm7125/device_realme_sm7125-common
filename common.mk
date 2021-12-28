@@ -61,18 +61,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/odm/,$(TARGET_COPY_OUT_ODM)/etc) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/vendor/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# FOD icons
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/FODicons/1.png:install/bin/FODicons/1.png \
-    $(LOCAL_PATH)/configs/FODicons/2.png:install/bin/FODicons/2.png \
-    $(LOCAL_PATH)/configs/FODicons/3.png:install/bin/FODicons/3.png \
-    $(LOCAL_PATH)/configs/FODicons/4.png:install/bin/FODicons/4.png \
-    $(LOCAL_PATH)/configs/FODicons/5.png:install/bin/FODicons/5.png \
-    $(LOCAL_PATH)/configs/FODicons/rui.png:install/bin/FODicons/rui.png
-
-PRODUCT_PACKAGES += \
-    SimpGallery
-
 # AVB
 PRODUCT_PACKAGES += \
     q-gsi.avbpubkey \
@@ -300,10 +288,6 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
     RcsService
-
-# Releasetools script
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/post_install.sh:install/bin/post_install.sh
 
 # RealmeParts
 PRODUCT_PACKAGES += \
