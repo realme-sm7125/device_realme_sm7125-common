@@ -100,6 +100,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
+    Camera2 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
 
@@ -278,8 +279,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
 # Prebuilt apps (papps)
-PRODUCT_PACKAGES += \
-    GCamGo
+#PRODUCT_PACKAGES += \
+#    GCamGo
 
 # Power
 PRODUCT_PACKAGES += \
