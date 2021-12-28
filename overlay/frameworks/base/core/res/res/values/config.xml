@@ -546,4 +546,10 @@
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">false</bool>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/battery/voocchg_ing</string>
+
+    <!-- Whether device has VOOC charging support -->
+    <bool name="config_hasVoocCharger">true</bool>
 </resources>
