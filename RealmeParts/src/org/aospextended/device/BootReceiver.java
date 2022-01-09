@@ -32,6 +32,7 @@ import org.aospextended.device.gestures.TouchGestures;
 import org.aospextended.device.util.Utils;
 import org.aospextended.device.doze.DozeUtils;
 import org.aospextended.device.vibration.VibratorStrengthPreference;
+import org.aospextended.device.camerahelper.CameraService;
 
 public class BootReceiver extends BroadcastReceiver {
 
@@ -48,6 +49,10 @@ public class BootReceiver extends BroadcastReceiver {
                 RealmeParts.PREF_OTG, false));
         }
         DozeUtils.checkDozeService(context);
+        String prj = Utils.getFileValue("/proc/oplusVersion/prjName", "");
+        if ("206B1".equals(prj)) {
+            context.startService(new Intent(context, CameraService.class));
+        }
 //        VibratorStrengthPreference.restore(context);
     }
 
