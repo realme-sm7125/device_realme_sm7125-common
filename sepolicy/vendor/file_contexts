@@ -5,7 +5,7 @@
 /sys/bus/platform/devices/soc:fpc1020(/.*?)    u:object_r:vendor_sysfs_fps_attr:s0
 
 # Biometrics
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.realme_sm7125    u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.realme_sm7125    u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|odm)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service              u:object_r:hal_fingerprint_default_exec:s0
 
 # Light Hal
