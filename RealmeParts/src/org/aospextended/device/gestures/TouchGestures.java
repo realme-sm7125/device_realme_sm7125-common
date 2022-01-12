@@ -181,15 +181,15 @@ public class TouchGestures extends PreferenceFragment implements
         setPref(mGestureM, mPrefs.getString(PREF_GESTURE_M,
                 Action.ACTION_MEDIA_PLAY_PAUSE));
         setPref(mGestureCircle, mPrefs.getString(PREF_GESTURE_CIRCLE,
-                Action.ACTION_VIB_SILENT));
+                Action.ACTION_TORCH));
         setPref(mGestureTwoSwipe, mPrefs.getString(PREF_GESTURE_TWO_SWIPE,
                 Action.ACTION_MEDIA_PREVIOUS));
         setPref(mGestureUpArrow, mPrefs.getString(PREF_GESTURE_UP_ARROW,
-                Action.ACTION_MEDIA_NEXT));
+                Action.ACTION_WAKE_DEVICE));
         setPref(mGestureDownArrow, mPrefs.getString(PREF_GESTURE_DOWN_ARROW,
-                Action.ACTION_MEDIA_NEXT));
+                Action.ACTION_VIB_SILENT));
         setPref(mGestureLeftArrow, mPrefs.getString(PREF_GESTURE_LEFT_ARROW,
-                Action.ACTION_MEDIA_NEXT));
+                Action.ACTION_MEDIA_PREVIOUS));
         setPref(mGestureRightArrow, mPrefs.getString(PREF_GESTURE_RIGHT_ARROW,
                 Action.ACTION_MEDIA_NEXT));
         setPref(mGestureSwipeUp, mPrefs.getString(PREF_GESTURE_SWIPE_UP,
@@ -234,7 +234,7 @@ public class TouchGestures extends PreferenceFragment implements
 
     private String getDescription(String action) {
         if (action == null) {
-            return null;
+            return "None";
         }
         int i = 0;
         for (String val : mActionValues) {
@@ -243,7 +243,7 @@ public class TouchGestures extends PreferenceFragment implements
             }
             i++;
         }
-        return null;
+        return "None";
     }
 
     @Override
