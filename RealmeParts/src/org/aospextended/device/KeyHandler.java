@@ -106,9 +106,9 @@ public class KeyHandler implements DeviceKeyHandler {
                 if (mPref.getBoolean(TouchGestures.PREF_DT2W_ENABLE, true)) {
                     action = mPref.getString(TouchGestures.PREF_GESTURE_DOUBLE_TAP,
                             Action.ACTION_WAKE_DEVICE);
-                            doHapticFeedback();
 
-                    if (mPref.getBoolean(DozeUtils.GESTURE_DOUBLE_TAP, false)) {
+                    if (mPref.getBoolean(DozeUtils.GESTURE_DOUBLE_TAP, false)
+                            && DozeUtils.isDozeEnabled(mContext)) {
                         action = null;
                         DozeUtils.launchDozePulse(mAppContext);
                         doHapticFeedback();
@@ -118,68 +118,58 @@ public class KeyHandler implements DeviceKeyHandler {
             case GESTURE_W_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_W,
                         Action.ACTION_CAMERA);
-                        doHapticFeedback();
                 break;
             case GESTURE_M_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_M,
                         Action.ACTION_MEDIA_PLAY_PAUSE);
-                        doHapticFeedback();
                 break;
             case GESTURE_CIRCLE_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_CIRCLE,
                         Action.ACTION_TORCH);
-                        doHapticFeedback();
                 break;
             case GESTURE_TWO_SWIPE_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_TWO_SWIPE,
                         Action.ACTION_MEDIA_PREVIOUS);
-                        doHapticFeedback();
                 break;
             case GESTURE_UP_ARROW_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_UP_ARROW,
                         Action.ACTION_WAKE_DEVICE);
-                        doHapticFeedback();
                 break;
             case GESTURE_DOWN_ARROW_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_DOWN_ARROW,
                         Action.ACTION_VIB_SILENT);
-                        doHapticFeedback();
                 break;
             case GESTURE_LEFT_ARROW_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_LEFT_ARROW,
                         Action.ACTION_MEDIA_PREVIOUS);
-                        doHapticFeedback();
                 break;
             case GESTURE_RIGHT_ARROW_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_RIGHT_ARROW,
                         Action.ACTION_MEDIA_NEXT);
-                        doHapticFeedback();
                 break;
             case GESTURE_SWIPE_UP_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_SWIPE_UP,
                         Action.ACTION_WAKE_DEVICE);
-                        doHapticFeedback();
                 break;
             case GESTURE_SWIPE_DOWN_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_SWIPE_DOWN,
                         Action.ACTION_VIB_SILENT);
-                        doHapticFeedback();
                 break;
             case GESTURE_SWIPE_LEFT_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_SWIPE_LEFT,
                         Action.ACTION_MEDIA_PREVIOUS);
-                        doHapticFeedback();
                 break;
             case GESTURE_SWIPE_RIGHT_SCANCODE:
                 action = mPref.getString(TouchGestures.PREF_GESTURE_SWIPE_RIGHT,
                         Action.ACTION_MEDIA_NEXT);
-                        doHapticFeedback();
                 break;
             }
 
             if (DEBUG) Slog.d(TAG, "scancode: " + event.getScanCode() + "action: " + action);
 
             if (action == null || action.equals(Action.ACTION_NULL)) return;
+
+            doHapticFeedback();
 
             if (action.equals(Action.ACTION_CAMERA)) {
                 Action.processAction(mContext, Action.ACTION_WAKE_DEVICE, false);
