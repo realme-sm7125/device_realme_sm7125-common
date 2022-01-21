@@ -75,6 +75,9 @@ ro.netflix.bsp_rev=Q6250-19132-1
 persist.nfc.smartcard.recorder.enable=true
 ro.nfc.port=I2C
 
+# Octavi props
+ro.octavi.maintainer=Mayur Varde
+
 # Perf
 ro.vendor.qti.sys.fw.bservice_enable=true
 

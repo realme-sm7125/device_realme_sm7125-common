@@ -288,11 +288,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RealmeParts
 
-ifeq ($(WITH_GAPPS), true)
+#ifeq ($(WITH_GAPPS), true)
 # Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-endif
+#PRODUCT_PACKAGES += \
+#    RemovePackages
+#endif
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
