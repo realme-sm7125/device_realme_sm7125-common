@@ -263,7 +263,8 @@ PRODUCT_PACKAGES += \
 
 # Prebuilt apps (papps)
 PRODUCT_PACKAGES += \
-    GCamGo
+    GCamGo \
+    GoogleSoundPicker
 
 # Power
 PRODUCT_PACKAGES += \
