@@ -100,4 +100,12 @@ void vendor_load_properties()
 
     // Dalvik heap configuration
     load_dalvik_properties();
+
+    // SafetyNet workaround
+    property_override("ro.boot.verifiedbootstate", "green");
+    property_override("ro.boot.flash.locked", "1");
+    property_override("ro.boot.veritymode", "enforcing");
+    property_override("ro.boot.vbmeta.device_state", "locked");
+    property_override("ro.oem_unlock_supported", "0");
+    property_override("vendor.boot.vbmeta.device_state", "locked");
 }
