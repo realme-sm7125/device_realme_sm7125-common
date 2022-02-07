@@ -207,7 +207,7 @@ public class TouchGestures extends PreferenceFragment implements
         mEnableDt2w.setOnPreferenceChangeListener(this);
 
         boolean enableGestures =
-                mPrefs.getBoolean(PREF_GESTURE_ENABLE, true);
+                mPrefs.getBoolean(PREF_GESTURE_ENABLE, false);
         mEnableGestures.setChecked(enableGestures);
         mEnableGestures.setOnPreferenceChangeListener(this);
 
