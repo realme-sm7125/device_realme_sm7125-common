@@ -6,6 +6,7 @@ genfscon proc /touchpanel              u:object_r:proc_touchpanel:s0
 
 # Oppo Project Version
 genfscon proc /oppoVersion                      u:object_r:proc_oppoversion:s0
+genfscon proc /oplusVersion                      u:object_r:proc_oppoversion:s0
 
 # Oppo FP
 genfscon proc /fp_id                     u:object_r:proc_oppo_fp:s0
@@ -57,3 +58,5 @@ genfscon sysfs /devices/platform/soc/880000.i2c/i2c-0/0-0028/wakeup    u:object_
 
 # FW Update
 genfscon proc /fastchg_fw_update              u:object_r:proc_fw_update:s0
+
+genfscon proc /ui_soc_decimal              u:object_r:proc_decimal:s0
