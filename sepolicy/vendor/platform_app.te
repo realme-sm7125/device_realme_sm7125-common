@@ -1,3 +1,5 @@
 allow platform_app hal_dms_hwservice:hwservice_manager find;
 allow platform_app hal_dms_default:binder { call transfer };
 allow platform_app vendor_sysfs_kgsl:lnk_file read;
+
+r_dir_file(platform_app, proc_decimal)

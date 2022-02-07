@@ -19,10 +19,14 @@ allow hal_fingerprint_default proc_touchpanel:file rw_file_perms;
 allow hal_fingerprint_default vendor_sysfs_fps_attr:dir search;
 allow hal_fingerprint_default vendor_sysfs_fps_attr:file rw_file_perms;
 
+allow hal_fingerprint_default sysfs_oppo_display:dir search;
+allow hal_fingerprint_default sysfs_oppo_display:file rw_file_perms;
+
 get_prop(hal_fingerprint_default, oppo_debug_prop);
 get_prop(hal_fingerprint_default, vendor_adsprpc_prop);
 
 r_dir_file(hal_fingerprint_default, vendor_sysfs_graphics);
 r_dir_file(hal_fingerprint_default, mnt_vendor_file);
+r_dir_file(hal_fingerprint_default, proc_oppoversion);
 
 set_prop(hal_fingerprint_default, oppo_fingerprint_prop);
