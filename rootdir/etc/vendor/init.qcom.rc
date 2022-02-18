@@ -1159,3 +1159,7 @@ service vendor.hwcomposer-2-4 /vendor/bin/hw/android.hardware.graphics.composer@
     onrestart restart surfaceflinger
     writepid /dev/cpuset/system-background/tasks
     socket pps stream 0660 system system
+
+on property:sys.boot_completed=1
+    # Set default gpu powerlevel to 3
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 3
