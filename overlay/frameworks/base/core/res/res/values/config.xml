@@ -550,9 +550,12 @@
     <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
     <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/battery/voocchg_ing</string>
 
-    <!-- Whether device has VOOC charging support -->
-    <bool name="config_hasVoocCharger">true</bool>
-
     <!-- Flag indicating whether we should enable the adaptive sleep.-->
     <bool name="config_adaptive_sleep_available">true</bool>
+
+    <!-- Whether device has SuperDart charging support -->
+    <bool name="config_hasSuperDartCharger">true</bool>
+
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <bool name="config_fpCancelIfNotIdle">true</bool>
 </resources>
