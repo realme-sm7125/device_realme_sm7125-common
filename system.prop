@@ -95,6 +95,9 @@ ro.nfc.port=I2C
 
 # Octavi props
 ro.octavi.maintainer=Mayur Varde
+ro.octavi.display.pid=1597259
+ro.octavi.hw.cam=64MP,12MP,2MP,2MP:32MP
+ro.octavi.hw.cpu=Snapdragon 720G
 
 # Perf
 ro.vendor.qti.sys.fw.bservice_enable=true
