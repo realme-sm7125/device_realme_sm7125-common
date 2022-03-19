@@ -269,6 +269,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GCamGo
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/papps/priv-app/GCamGo/files/hiddenapi-package-whitelist-GCamGo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-GCamGo.xml \
+    $(LOCAL_PATH)/papps/priv-app/GCamGo/files/com.google.android.GCamGo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.GCamGo.xml
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service
