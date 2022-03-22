@@ -30,6 +30,9 @@ genfscon proc /lcd_type           u:object_r:proc_lcd:s0
 # Oppo rf
 genfscon proc /oppo_rf            u:object_r:proc_oppo_rf:s0
 
+# UFS
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable                                         u:object_r:vendor_sysfs_scsi_host:s0
+
 # Wakeup stats
 genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/wakeup    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/diag/diag    u:object_r:sysfs_wakeup:s0
