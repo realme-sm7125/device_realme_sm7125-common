@@ -83,6 +83,11 @@ vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.snd_mon.enable=true
 
+# Battery
+pm.sleep_mode=1
+power.saving.mode=1
+ro.ril.disable.power.collapse=0
+
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
