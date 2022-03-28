@@ -570,4 +570,10 @@
          the blur effect where it isn't worth the performance hit.
          As of Honeycomb, blurring is not supported anymore. -->
     <bool name="config_sf_slowBlur">false</bool>
+
+    <!-- Night Light FOD -->
+    <bool name="disable_fod_night_light">true</bool>
+
+    <!-- Whether to disable Night Light on Udfps keyguard -->
+    <bool name="config_udfpsDisableNightLight">true</bool>
 </resources>
