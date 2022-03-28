@@ -563,10 +563,4 @@
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
-
-    <!-- Night Light FOD -->
-    <bool name="disable_fod_night_light">true</bool>
-
-    <!-- Whether to disable Night Light on Udfps keyguard -->
-    <bool name="config_udfpsDisableNightLight">true</bool>
 </resources>
