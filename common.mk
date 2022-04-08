@@ -267,7 +267,11 @@ PRODUCT_PACKAGES += \
 
 # Prebuilt apps (papps)
 PRODUCT_PACKAGES += \
-    GCamGo
+    GCamGo \
+    Phone \
+    Message \
+    Calculator \
+    Clock
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/papps/priv-app/GCamGo/files/hiddenapi-package-whitelist-GCamGo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-GCamGo.xml \
