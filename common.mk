@@ -19,8 +19,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Get Hotword stuff
+# Get custom stuff
 $(call inherit-product-if-exists, vendor/hotword/google.mk)
+$(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
