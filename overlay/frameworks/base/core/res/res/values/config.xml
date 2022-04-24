@@ -114,7 +114,7 @@
     <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
 
     <!-- Config determines whether to update phone object when voice registration
-         state changes. Voice radio tech change will always trigger an update of
+         state changes.  Voice radio tech change will always trigger an update of
          phone object irrespective of this config -->
     <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
 
@@ -145,7 +145,10 @@
 
          Refer to power.h for details.
     -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
+    <!-- <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool> -->
+
+    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
+    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
 
     <!-- Delay that allows some content to arrive at the display before switching
          from DOZE to ON, in millis. -->
@@ -179,7 +182,7 @@
          to maximize power savings but not all devices support it.
          Refer to autosuspend.h for details.
     -->
-    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
+    <!-- <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool> -->
 
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
@@ -187,7 +190,7 @@
     <integer name="config_screenBrightnessDoze">17</integer>
 
     <!-- Whether the display blanks itself when transitioning from a doze to a non-doze state -->
-    <bool name="config_displayBlanksAfterDoze">true</bool>
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 
     <!-- Enable doze alwaysOn Display -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
