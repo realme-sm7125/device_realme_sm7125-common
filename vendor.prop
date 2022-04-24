@@ -108,6 +108,13 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
+# Dirac
+persist.audio.dirac.speaker=true
+persist.dirac.acs.controller=qem
+persist.dirac.acs.ignore_error=1
+persist.dirac.acs.storeSettings=1
+ro.audio.soundfx.dirac=true
+
 # Display
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
