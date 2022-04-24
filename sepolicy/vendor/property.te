@@ -7,4 +7,4 @@ type oppo_wlan_prop, vendor_property_type;
 type vendor_dolby_loglevel_prop, vendor_property_type;
 
 # Dirac
-type dirac_prop, property_type;
+type dirac_prop, vendor_property_type;
