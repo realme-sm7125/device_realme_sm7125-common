@@ -241,7 +241,7 @@ Return<void> BiometricsFingerprint::onShowUdfpsOverlay() {
 
 Return<void> BiometricsFingerprint::onFingerUp() {
     if (isUdfps(0)) {
-        set(FP_PRESS_PATH, 0);
+        set(FP_PRESS_PATH, 1);
     }
     return Void();
 }
@@ -261,7 +261,7 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 Return<void> BiometricsFingerprint::onHideUdfpsOverlay() {
     if (isUdfps(0)) {
         set(DIMLAYER_PATH, 0);
-        set(FP_PRESS_PATH, 0);
+        set(FP_PRESS_PATH, 1);
     }
     return Void();
 }
