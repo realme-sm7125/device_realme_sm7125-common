@@ -557,9 +557,6 @@
          etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 
-    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/power_supply/battery/voocchg_ing</string>
-
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware for individual layers. -->
     <bool name="config_setColorTransformAcceleratedPerLayer">true</bool>
