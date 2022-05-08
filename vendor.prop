@@ -83,6 +83,14 @@ vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.snd_mon.enable=true
 
+# Battery
+pm.sleep_mode=1
+power.saving.mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.rule=0
+ro.ril.power_collapse=1
+ro.config.hw_fast_dormancy=0
+
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
@@ -137,6 +145,10 @@ vendor.hw.fm.init=0
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# JNI
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
 
 # Keyguard
 keyguard.no_require_sim=true
