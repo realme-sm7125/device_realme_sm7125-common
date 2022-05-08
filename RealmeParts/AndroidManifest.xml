@@ -57,7 +57,7 @@
                 android:value="@color/icon_bg_color"/>
             <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.homepage" />
+                android:value="com.android.settings.category.ia.system" />
             <meta-data android:name="com.android.settings.summary"
                 android:resource="@string/RealmeParts_summary" />
         </activity-alias>
