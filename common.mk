@@ -262,7 +262,7 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage \
-    $(LOCAL_PATH)/overlay-derp
+    $(LOCAL_PATH)/overlay-cr
 
 # Perf
 PRODUCT_PACKAGES += \
