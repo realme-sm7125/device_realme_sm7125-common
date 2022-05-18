@@ -55,6 +55,8 @@
     <integer name="keyguard_max_notification_count_ambient_play">2</integer>
 
     <!-- Bottom margin size when fingerprint in display is active -->
-    <dimen name="keyguard_indication_margin_bottom_fingerprint_in_display">116dp</dimen>
+    <dimen name="keyguard_indication_margin_bottom_fingerprint_in_display">@dimen/keyguard_indication_margin_bottom</dimen>
 
+    <!-- Bottom margin size -->
+    <dimen name="keyguard_indication_margin_bottom">118dp</dimen>
 </resources>
