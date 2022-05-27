@@ -446,3 +446,6 @@ chown system system /sys/bus/platform/devices/soc:fpc1020/irq
 chown system system /sys/bus/platform/devices/soc:fpc1020/irq_enable
 chown system system /sys/bus/platform/devices/soc:fpc1020/wakelock_enable
 
+on property:sys.boot_completed=1
+   # Enable PowerHAL hint processing
+   setprop vendor.powerhal.init 1
