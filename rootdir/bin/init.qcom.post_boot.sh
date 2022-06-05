@@ -4056,18 +4056,18 @@ case "$target" in
     echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
 
     # configure governor settings for little cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-    echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-    echo 1248000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-    echo 576000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    # echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    # echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
+    # echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
+    # echo 1248000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
+    # echo 576000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
     # configure governor settings for big cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-    echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
-    echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
-    echo 1267200 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
-    echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
+    # echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
+    # echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
+    # echo 0 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
+    # echo 1267200 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
+    # echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
 
     # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
     echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
@@ -4153,7 +4153,7 @@ case "$target" in
     echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
 
     #/*Yongpeng Feng@BSP.kernel.Performance change IO scheduler to noop */
-    echo noop > /sys/block/sda/queue/scheduler
+    # echo noop > /sys/block/sda/queue/scheduler
 
     #/*Hu Yu@BSP.kernel.Performance create 1 kswapd thread for 7150*/
     echo 1 > /proc/sys/vm/kswapd_threads
