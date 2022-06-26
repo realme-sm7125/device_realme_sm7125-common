@@ -272,8 +272,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
 # Prebuilt apps (papps)
-PRODUCT_PACKAGES += \
-    GCamGo
+# PRODUCT_PACKAGES += \
+#     GCamGo
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/papps/priv-app/GCamGo/files/hiddenapi-package-whitelist-GCamGo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-GCamGo.xml \
