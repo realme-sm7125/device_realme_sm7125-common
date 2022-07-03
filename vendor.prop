@@ -148,7 +148,6 @@ ro.kernel.checkjni=0
 
 # Keyguard
 keyguard.no_require_sim=true
-persist.wm.enable_remote_keyguard_animation=0
 
 # Keystore
 ro.hardware.keystore_desede=true
