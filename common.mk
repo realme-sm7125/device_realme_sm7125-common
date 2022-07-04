@@ -610,4 +610,5 @@ PRODUCT_PACKAGES += \
     libadf.vendor \
     libstdc++.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
+    vendor.qti.hardware.camera.postproc@1.0.vendor \
     libtinyxml.vendor
