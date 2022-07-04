@@ -30,3 +30,6 @@ ro.incremental.enable=1
 ro.iorapd.enable=true
 iorapd.perfetto.enable=true
 iorapd.readahead.enable=true
+
+# RIL
+persist.vendor.qti.telephony.vt_cam_interface=2
