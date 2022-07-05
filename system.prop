@@ -14,6 +14,10 @@ ro.qc.sdk.audio.fluencetype=none
 vendor.bluetooth.soc=cherokee
 ro.bluetooth.library_name=libbluetooth.so 
 
+# Camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera
+vendor.camera.aux.packageblacklist=org.telegram.plus,com.revolut.revolut,org.telegram.messenger
+
 # CNE
 persist.vendor.cne.feature=1
 
