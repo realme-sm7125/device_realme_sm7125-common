@@ -32,6 +32,10 @@ persist.vendor.service.bdroid.soc.alwayson=true
 persist.vendor.service.bt.iotinfo.report.enable=true 
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 
+# Camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera
+vendor.camera.aux.packageblacklist=org.telegram.plus,com.revolut.revolut,org.telegram.messenger
+
 # CNE
 persist.vendor.cne.feature=1
 
