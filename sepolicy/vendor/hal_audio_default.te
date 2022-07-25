@@ -8,5 +8,6 @@ allow hal_audio_default hal_dms_default:binder { transfer call };
 allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
 
 # Dirac
-get_prop(hal_audio_default, dirac_prop)
-set_prop(hal_audio_default, dirac_prop)
+allow hal_audio_default audio_prop:property_service { set };
+get_prop(hal_audio_default, dirac_prop);
+set_prop(hal_audio_default, dirac_prop);
