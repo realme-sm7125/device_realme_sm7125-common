@@ -17,7 +17,7 @@
 -->
 <resources>
     <!-- Height of area above QQS where battery/time go -->
-    <dimen name="quick_qs_offset_height">28dp</dimen>
+    <dimen name="quick_qs_offset_height">30dp</dimen>
 
     <!-- Total height of QQS in landscape, this is effectively status_bar_height_landscape + 128 -->
     <dimen name="quick_qs_total_height">156dp</dimen>
