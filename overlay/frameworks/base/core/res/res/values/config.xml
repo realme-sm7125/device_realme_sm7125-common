@@ -381,8 +381,8 @@
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
         <item>1</item>
+        <item>35</item>
         <item>25</item>
-        <item>20</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
@@ -390,7 +390,7 @@
         <item>0</item>
         <item>10</item>
         <item>35</item>
-        <item>20</item>
+        <item>30</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback when selecting an hour/minute tick of a Clock -->
@@ -419,8 +419,8 @@
     <integer-array name="config_scrollBarrierVibePattern">
         <item>0</item>
         <item>15</item>
-        <item>10</item>
-        <item>10</item>
+        <item>30</item>
+        <item>20</item>
     </integer-array>
 
     <!-- Vibrator pattern to be used as the default for notifications
