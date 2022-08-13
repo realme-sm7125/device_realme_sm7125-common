@@ -21,4 +21,6 @@
     <!-- Whether device has VOOC charging support -->
     <bool name="config_hasVoocCharger">true</bool>
 
+    <!-- System Info -->
+    <bool name="config_supportSystemInfo">true</bool>
 </resources>
