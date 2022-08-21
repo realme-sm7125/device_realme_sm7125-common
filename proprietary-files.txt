@@ -45,6 +45,9 @@ odm/vendor/firmware/alipay.b03
 odm/vendor/firmware/alipay.b05
 odm/vendor/firmware/alipay.b04
 
+# Ant
+vendor/lib64/com.dsi.ant@1.0.so
+
 # Audio
 vendor/bin/audioflacapp
 system_ext/etc/permissions/audiosphere.xml

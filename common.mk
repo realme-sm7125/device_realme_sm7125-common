@@ -67,7 +67,8 @@ PRODUCT_PACKAGES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
-    libbthost_if
+    libbthost_if \
+    com.dsi.ant@1.0.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
