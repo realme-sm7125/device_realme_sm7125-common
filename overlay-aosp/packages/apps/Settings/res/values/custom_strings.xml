@@ -12,8 +12,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="maintainer">Maintainer</string>
-    <string name="maintainer_name">Mayur Varde</string>
-    <string name="maintainer_telegram" translatable="false">https://t.me/marshmello_61</string>
+    <string name="build_maintainer">Maintainer</string>
+    <string name="build_maintainer_summary">Mayur Varde</string>
+    <string name="build_maintainer_telegram" translatable="false">https://t.me/marshmello_61</string>
     <string name="volume_panel_is_on_left" translatable="false">true</string>
 </resources>
