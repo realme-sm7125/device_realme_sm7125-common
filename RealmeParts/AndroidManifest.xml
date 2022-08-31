@@ -105,6 +105,14 @@
             android:name=".camerahelper.CameraService"
             android:enabled="true" />
 
+        <activity
+            android:name="org.aospextended.device.display.DcDimmingSettingsActivity"
+            android:label="@string/dc_dimming_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

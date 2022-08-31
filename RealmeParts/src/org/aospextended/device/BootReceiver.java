@@ -61,7 +61,9 @@ public class BootReceiver extends BroadcastReceiver {
 //        VibratorStrengthPreference.restore(context);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
-        FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "0x40000" : "0x50000");
+        try {
+            FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
+        } catch(Exception e) {}
     }
 
     private void enableComponent(Context context, String component) {
