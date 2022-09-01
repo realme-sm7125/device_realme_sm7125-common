@@ -40,6 +40,8 @@ public class BootReceiver extends BroadcastReceiver {
 
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
     private static final String DC_DIMMING_NODE = "/sys/kernel/oppo_display/dimlayer_bl_en";
+    private static final String HBM_ENABLE_KEY = "hbm_mode";
+    private static final String HBM_NODE = "/sys/kernel/oppo_display/hbm";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -63,6 +65,10 @@ public class BootReceiver extends BroadcastReceiver {
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         try {
             FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
+        } catch(Exception e) {}
+        boolean hbmEnabled = sharedPrefs.getBoolean(HBM_ENABLE_KEY, false);
+        try {
+            FileUtils.writeLine(HBM_NODE, hbmEnabled ? "1" : "0");
         } catch(Exception e) {}
     }
 

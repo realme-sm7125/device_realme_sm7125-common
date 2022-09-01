@@ -187,9 +187,16 @@
     <string name="double_tap_gesture_summary">Double tap to show notifications</string>
 
     <!-- DC dimming settings -->
-    <string name="dc_dimming_title">Anti-flicker</string>
-    <string name="dc_dimming_enable_title">DC Dimming</string>
-    <string name="dc_dimming_summary">Fixes screen flickering</string>
+    <string name="dc_dimming_enable_title">Anti-flicker</string>
     <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
     <string name="dc_dimming_enable_summary_not_supported">DC Dimming is currently not supported by the kernel</string>
+
+    <!--Display settings fragment -->
+    <string name="display_settings_title">Display tweaks</string>
+    <string name="display_settings_summary">High brightness mode and Anti-flicker</string>
+
+    <!-- HBM settings -->
+    <string name="hbm_mode_title">High Brightness Mode</string>
+    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value\, which helps in improving visibility in direct sunlight</string>
+    <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
 </resources>
