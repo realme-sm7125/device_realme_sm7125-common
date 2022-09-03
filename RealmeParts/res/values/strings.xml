@@ -204,4 +204,9 @@
     <!-- Misc settings fragment -->
     <string name="misc_settings_title">Miscelleneous</string>
     <string name="misc_settings_summary">Customizations that does not fall in above categories</string>
+
+    <!-- Game switch -->
+    <string name="gameswitch_enable_summary">Boosts touch sampling rate for smoother and better game play</string>
+    <string name="gameswitch_enable_title">Gaming mode</string>
+    <string name="gameswitch_enable_summary_not_supported">Gaming mode is not currently supported</string>
 </resources>

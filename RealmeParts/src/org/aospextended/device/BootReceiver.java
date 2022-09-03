@@ -44,6 +44,9 @@ public class BootReceiver extends BroadcastReceiver {
     private static final String HBM_NODE = "/sys/kernel/oppo_display/hbm";
     private static final String PREF_OTG = "otg";
     private static final String OTG_PATH = "/sys/class/power_supply/usb/otg_switch";
+    private static final String GAMESWITCH_ENABLE_KEY = "game_switch";
+    private static final String GAMESWITCH_NODE = "/proc/touchpanel/game_switch_enable";
+
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -73,6 +76,10 @@ public class BootReceiver extends BroadcastReceiver {
         boolean OTGEnabled = sharedPrefs.getBoolean(PREF_OTG, false);
         try {
             FileUtils.writeLine(OTG_PATH, OTGEnabled ? "1" : "0");
+        } catch(Exception e) {}
+        boolean GameSwitchEnabled = sharedPrefs.getBoolean(GAMESWITCH_ENABLE_KEY, false);
+        try {
+            FileUtils.writeLine(GAMESWITCH_NODE, GameSwitchEnabled ? "1" : "0");
         } catch(Exception e) {}
     }
 

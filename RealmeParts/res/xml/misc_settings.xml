@@ -20,4 +20,10 @@
         android:key="otg"
         android:title="@string/otg_title"
         android:summary="@string/otg_summary" />
+
+    <SwitchPreference
+        android:key="game_switch"
+        android:defaultValue="false"
+        android:title="@string/gameswitch_enable_title"
+        android:summary="@string/gameswitch_enable_summary" />
 </PreferenceScreen>
