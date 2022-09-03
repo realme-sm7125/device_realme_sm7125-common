@@ -100,7 +100,7 @@
     <string name="screen_off_gesture_settings_title">Screen off gestures</string>
 
     <!-- Ambient Display -->
-    <string name="ambient_display_title">Ambient display</string>
+    <string name="ambient_display_title">Display</string>
     <string name="ambient_display_enable_title">Ambient display</string>
     <string name="ambient_display_enable_summary">Wake screen when you receive notifications</string>
     <string name="ambient_display_gestures_title">Ambient display gestures</string>
@@ -181,6 +181,7 @@
     <!-- OTG strings-->
     <string name="otg_title">Enable OTG</string>
     <string name="otg_summary">Enable USB on-the-go device</string>
+    <string name="otg_enable_summary_not_supported">OTG is currently not supported</string>
 
     <!-- Double Tap to check phone  strings-->
     <string name="double_tap_gesture_title">Double tap to check phone</string>
@@ -199,4 +200,8 @@
     <string name="hbm_mode_title">High Brightness Mode</string>
     <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value\, which helps in improving visibility in direct sunlight</string>
     <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
+
+    <!-- Misc settings fragment -->
+    <string name="misc_settings_title">Miscelleneous</string>
+    <string name="misc_settings_summary">Customizations that does not fall in above categories</string>
 </resources>

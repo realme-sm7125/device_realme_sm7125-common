@@ -125,6 +125,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="org.aospextended.device.misc.MiscSettingsActivity"
+            android:label="@string/misc_settings_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

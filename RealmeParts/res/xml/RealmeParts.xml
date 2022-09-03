@@ -22,23 +22,23 @@
             android:summary="@string/ambient_display_gestures_summary"
             android:icon="@drawable/ic_ambient_display_gestures"
             android:title="@string/ambient_display_gestures_title" />
+
+        <Preference 
+            android:key="display_settings"
+            android:icon="@drawable/ic_dcdimming" 
+            android:title="@string/display_settings_title"
+            android:summary="@string/display_settings_summary" />
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="misc_category"
         android:title="@string/misc_title">
 
-        <SwitchPreference
-            android:key="otg"
-            android:summary="@string/otg_summary"
-            android:title="@string/otg_title"
-            android:icon="@drawable/ic_otg" />
-
         <Preference
-            android:key="display_settings"
-            android:icon="@drawable/ic_dcdimming"
-            android:title="@string/display_settings_title"
-            android:summary="@string/display_settings_summary" />
+            android:key="misc_settings"
+            android:summary="@string/misc_settings_summary"
+            android:title="@string/misc_settings_title"
+            android:icon="@drawable/ic_misc" />
     </PreferenceCategory>
 <!--
     <PreferenceCategory

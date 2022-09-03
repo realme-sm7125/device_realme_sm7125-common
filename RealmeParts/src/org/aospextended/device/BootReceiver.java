@@ -42,6 +42,8 @@ public class BootReceiver extends BroadcastReceiver {
     private static final String DC_DIMMING_NODE = "/sys/kernel/oppo_display/dimlayer_bl_en";
     private static final String HBM_ENABLE_KEY = "hbm_mode";
     private static final String HBM_NODE = "/sys/kernel/oppo_display/hbm";
+    private static final String PREF_OTG = "otg";
+    private static final String OTG_PATH = "/sys/class/power_supply/usb/otg_switch";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -52,8 +54,6 @@ public class BootReceiver extends BroadcastReceiver {
                 TouchGestures.PREF_GESTURE_ENABLE, false));
             TouchGestures.enableDt2w(prefs.getBoolean(
                 TouchGestures.PREF_DT2W_ENABLE, true));
-            RealmeParts.enableOTG(prefs.getBoolean(
-                RealmeParts.PREF_OTG, false));
         }
         DozeUtils.checkDozeService(context);
         String prj = Utils.getFileValue("/proc/oplusVersion/prjName", "");
@@ -69,6 +69,10 @@ public class BootReceiver extends BroadcastReceiver {
         boolean hbmEnabled = sharedPrefs.getBoolean(HBM_ENABLE_KEY, false);
         try {
             FileUtils.writeLine(HBM_NODE, hbmEnabled ? "1" : "0");
+        } catch(Exception e) {}
+        boolean OTGEnabled = sharedPrefs.getBoolean(PREF_OTG, false);
+        try {
+            FileUtils.writeLine(OTG_PATH, OTGEnabled ? "1" : "0");
         } catch(Exception e) {}
     }
 
