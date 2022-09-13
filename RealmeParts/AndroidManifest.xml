@@ -116,7 +116,7 @@
 
         <activity
             android:name=".doze.DozeSettingsActivity"
-            android:label="@string/ambient_display_title">
+            android:label="@string/ambient_display_gestures_title">
             <intent-filter>
                 <action android:name="org.aospextended.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
