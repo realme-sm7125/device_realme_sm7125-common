@@ -25,7 +25,7 @@ persist.vendor.cne.feature=1
 dalvik.vm.dexopt.secondary=true
 
 # Display
-debug.sf.latch_unsignaled=1
+debug.sf.latch_unsignaled=0
 ro.opengles.version=196610
 ro.sf.blurs_are_expensive=0
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
