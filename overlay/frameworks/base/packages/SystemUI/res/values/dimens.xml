@@ -58,5 +58,5 @@
     <dimen name="keyguard_indication_margin_bottom_fingerprint_in_display">@dimen/keyguard_indication_margin_bottom</dimen>
 
     <!-- Bottom margin size -->
-    <dimen name="keyguard_indication_margin_bottom">118dp</dimen>
+    <dimen name="keyguard_indication_margin_bottom">300px</dimen>
 </resources>
