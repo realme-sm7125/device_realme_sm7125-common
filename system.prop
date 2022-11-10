@@ -45,6 +45,12 @@ persist.sys.binary_xml=false
 # DPM
 persist.dpm.feature=1
 
+# Enable camera EIS
+# eis.enable: enables electronic image stabilization
+# is_type: sets image stabilization type
+persist.camera.eis.enable=1
+persist.camera.is_type=4
+
 # GBoard
 ro.com.google.ime.kb_pad_port_b=1
 
