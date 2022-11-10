@@ -46,6 +46,8 @@
         <item>com.google.camera</item>
         <item>com.shamim.cam</item>
         <item>app.grapheneos.camera</item>
+        <item>org.lineageos.aperture</item>
+        <item>org.lineageos.aperture.dev</item>
     </string-array>
 
     <!-- The list of package IDs that are not allowed to use aux cameras. -->
