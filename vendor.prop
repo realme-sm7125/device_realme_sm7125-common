@@ -201,5 +201,13 @@ persist.vendor.sensors.allow_non_default_discovery=true
 # Usb
 persist.vendor.usb.config.extra=none
 
+# Usb extras
+vendor.usb.dpl.inst.name=dpl
+vendor.usb.qdss.inst.name=qdss
+vendor.usb.rmnet.func.name=gsi
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=gsi
+vendor.usb.use_gadget_hal=0
+
 # Wi-Fi
 wifi.aware.interface=wifi-aware0
