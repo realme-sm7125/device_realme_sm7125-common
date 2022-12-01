@@ -23,6 +23,9 @@ ro.cpu.derp=SD720G
 # Dalvik
 dalvik.vm.dexopt.secondary=true
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Display
 debug.sf.latch_unsignaled=1
 ro.opengles.version=196610
