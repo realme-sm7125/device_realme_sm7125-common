@@ -33,6 +33,9 @@ ro.config.low_ram=false
 ro.lmk.filecache_min_kb=153600
 ro.lmk.stall_limit_critical=40
 
+# IMS
+ro.telephony.block_binder_thread_on_incoming_calls=false
+
 # Incremental FS
 ro.incremental.enable=1
 
