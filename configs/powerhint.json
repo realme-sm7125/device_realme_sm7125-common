@@ -92,6 +92,7 @@
       "Name": "FgSchedtunePreferIdle",
       "Path": "/dev/stune/foreground/schedtune.prefer_idle",
       "Values": [
+        "2",
         "1",
         "0"
       ],
@@ -324,6 +325,12 @@
       "Node": "LLCCBWMinFreq",
       "Duration": 0,
       "Value": "2929"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "SchedBoost",
+      "Duration": 0,
+      "Value": "2"
     },
     {
       "PowerHint": "LAUNCH",
