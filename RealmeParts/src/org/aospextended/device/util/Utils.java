@@ -170,6 +170,16 @@ public class Utils {
     }
 
     /**
+     * Checks whether the given file is readable
+     *
+     * @return true if readable, false if not
+     */
+    public static boolean isFileReadable(String fileName) {
+        final File file = new File(fileName);
+        return file.exists() && file.canRead();
+    }
+
+    /**
      * Reads the first line of text from the given file
      */
     public static String readOneLine(String fileName) {

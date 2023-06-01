@@ -39,6 +39,17 @@
             android:summary="@string/misc_settings_summary"
             android:title="@string/misc_settings_title"
             android:icon="@drawable/ic_misc" />
+
+        <Preference
+            android:key="battery_info"
+            android:title="@string/battery_info_title"
+            android:summary="@string/battery_info_summary"
+            android:icon="@drawable/ic_battery_profile"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.aospextended.device"
+                    android:targetClass="org.aospextended.device.batteryinfo.BatteryInfoActivity" />
+        </Preference>
     </PreferenceCategory>
 <!--
     <PreferenceCategory

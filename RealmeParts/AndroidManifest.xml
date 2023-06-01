@@ -145,6 +145,17 @@
             </intent-filter>
         </activity>
 
+        <!-- Battery info activity -->
+        <activity
+            android:name=".batteryinfo.BatteryInfoActivity"
+            android:label="@string/battery_info_title"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

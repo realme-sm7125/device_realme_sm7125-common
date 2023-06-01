@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:settings="http://schemas.android.com/apk/res/org.evolution.pixelparts">
+
+    <!-- Start of Battery info -->
+    <PreferenceCategory  
+        android:key="battery_information"
+        android:title="@string/category_battery_info">
+
+        <Preference
+            android:key="capacity"
+            android:title="@string/capacity_title"
+            android:selectable="false"
+            android:persistent="false" />
+
+        <Preference
+            android:key="cycle_count"
+            android:title="@string/cycle_count_title"
+            android:selectable="false"
+            android:persistent="false" />
+
+        <Preference
+            android:key="health"
+            android:title="@string/health_title"
+            android:selectable="false"
+            android:persistent="false" />
+
+        <Preference
+            android:key="status"
+            android:title="@string/status_title"
+            android:selectable="false"
+            android:persistent="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

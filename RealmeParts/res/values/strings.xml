@@ -209,4 +209,14 @@
     <string name="gameswitch_enable_summary">Boosts touch sampling rate for smoother and better game play</string>
     <string name="gameswitch_enable_title">Gaming mode</string>
     <string name="gameswitch_enable_summary_not_supported">Gaming mode is not currently supported</string>
+
+    <!-- Battery -->
+    <string name="battery_info_title">Battery info</string>
+    <string name="battery_info_summary">View various battery information</string>
+    <string name="category_battery_info">Available info</string>
+    <string name="capacity_title">Current capacity</string>
+    <string name="cycle_count_title">Cycle count</string>
+    <string name="health_title">Health</string>
+    <string name="status_title">Status</string>
+    <string name="node_not_readable_error">Failed to read</string>
 </resources>
