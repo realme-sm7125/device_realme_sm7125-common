@@ -33,7 +33,8 @@ dalvik.vm.dexopt.secondary=true
 debug.cpurend.vsync=false
 
 # Display
-debug.sf.auto_latch_unsignaled=true
+# debug.sf.auto_latch_unsignaled=true
+debug.sf.latch_unsignaled=0
 ro.opengles.version=196610
 # ro.sf.blurs_are_expensive=0
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true

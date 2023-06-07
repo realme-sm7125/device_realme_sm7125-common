@@ -9,7 +9,8 @@ ro.charger.enable_suspend=true
 # Display
 debug.sf.hw=0
 debug.egl.hw=0
-debug.sf.auto_latch_unsignaled=true
+# debug.sf.auto_latch_unsignaled=true
+debug.sf.latch_unsignaled=0
 debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000
 debug.mdpcomp.logs=0
 # persist.sys.sf.disable_blurs=1
