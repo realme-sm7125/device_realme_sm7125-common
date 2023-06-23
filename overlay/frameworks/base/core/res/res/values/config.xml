@@ -639,7 +639,7 @@
          at performing a blur.  Used by parts of the UI to turn off
          the blur effect where it isn't worth the performance hit.
          As of Honeycomb, blurring is not supported anymore. -->
-    <!-- <bool name="config_sf_slowBlur">false</bool> -->
+    <bool name="config_sf_slowBlur">false</bool>
 
     <!-- Enable video pause workaround when enabling/disabling the camera. -->
     <bool name="config_useVideoPauseWorkaround">true</bool>
