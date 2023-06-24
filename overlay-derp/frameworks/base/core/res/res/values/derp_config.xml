@@ -38,7 +38,6 @@
         <item>app.grapheneos.camera</item>
         <item>org.lineageos.aperture</item>
         <item>org.lineageos.aperture.dev</item>
-        <item>ru.andr7e.deviceinfohw</item>
     </string-array>
     <!-- The list of package IDs that are not allowed to use aux cameras. -->
     <string-array name="config_cameraAuxPackageExcludeList" translatable="false">
