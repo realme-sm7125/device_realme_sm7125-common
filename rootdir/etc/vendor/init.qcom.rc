@@ -176,6 +176,8 @@ on boot
     # Fastcharge
     chown system system /sys/class/qcom-battery/restrict_chg
     chmod 0666 /sys/class/qcom-battery/restrict_chg
+    chown system system /sys/class/qcom-battery/restrict_cur
+    chmod 0666 /sys/class/qcom-battery/restrict_cur
 
     # This location is used by QCRIL to host UNIX domain
     # socket files used for internal IPC within QCRIL
