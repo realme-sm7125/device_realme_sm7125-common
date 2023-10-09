@@ -21,13 +21,10 @@ import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.os.IBinder;
 import android.content.SharedPreferences;
 import android.os.SystemProperties;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
-import android.view.Display.HdrCapabilities;
-import android.view.SurfaceControl;
 
 import androidx.preference.PreferenceManager;
 
@@ -90,12 +87,6 @@ public class BootReceiver extends BroadcastReceiver {
         try {
             FileUtils.writeLine(FASTCHARGE_NODE, FastChargeEnabled ? "1" : "0");
         } catch(Exception e) {}
-
-        // Override HDR types
-        final IBinder displayToken = SurfaceControl.getInternalDisplayToken();
-        SurfaceControl.overrideHdrTypes(displayToken, new int[]{
-                HdrCapabilities.HDR_TYPE_DOLBY_VISION, HdrCapabilities.HDR_TYPE_HDR10,
-                HdrCapabilities.HDR_TYPE_HLG, HdrCapabilities.HDR_TYPE_HDR10_PLUS});
     }
 
     private void enableComponent(Context context, String component) {
