@@ -26,7 +26,6 @@
 #
 
 import /vendor/etc/init/hw/init.safailnet.rc
-import /vendor/etc/init/hw/init.mellolab.rc
 import /vendor/etc/init/hw/init.qti.ufs.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 
