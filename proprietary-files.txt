@@ -1271,7 +1271,7 @@ vendor/lib64/libaachaptics.so
 vendor/bin/cnss-daemon
 
 # WiFi Display
--framework/WfdCommon.jar
+-system/framework/WfdCommon.jar
 system_ext/bin/rtspclient
 system_ext/bin/rtspserver
 system_ext/bin/wfdservice
