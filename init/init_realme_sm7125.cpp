@@ -109,6 +109,7 @@ void vendor_load_properties()
     property_override("ro.oem_unlock_supported", "0");
     property_override("vendor.boot.vbmeta.device_state", "locked");
 
-    // Chipset
-    property_override("ro.cpu.derp", "Qualcomm® Snapdragon™ 720G");
+    // risingOS
+    property_override("ro.rising.chipset", "Qualcomm® Snapdragon™ 720G");
+    property_override("ro.rising.maintainer", "Mayur Varde");
 }
