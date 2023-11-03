@@ -109,6 +109,11 @@ void vendor_load_properties()
     property_override("ro.oem_unlock_supported", "0");
     property_override("vendor.boot.vbmeta.device_state", "locked");
 
-    // Chipset
-    property_override("ro.cpu.derp", "Qualcomm® Snapdragon™ 720G");
+    // risingOS
+    property_override("ro.rising.chipset", "Qualcomm® Snapdragon™ 720G");
+    property_override("ro.rising.maintainer", "Mayur Varde");
+    property_override("ro.rising.storage", "128gb / 256gb");
+    property_override("ro.rising.ram", "6gb / 8gb");
+    property_override("ro.rising.battery", "4500 mah");
+    property_override("ro.rising.display", "2400x1080 FHD+ Amoled");
 }
