@@ -1,0 +1,31 @@
+#allow system_app vibrator_sysfs:file rw_file_perms;
+allow system_app proc_touchpanel:file rw_file_perms;
+
+r_dir_file(system_app, proc_touchpanel);
+#r_dir_file(system_app, vibrator_sysfs);
+
+r_dir_file(system_app, vendor_sysfs_usb_supply);
+allow system_app vendor_sysfs_usb_supply:file rw_file_perms;
+
+allow system_app sysfs_oppo_display:file rw_file_perms;
+allow system_app sysfs_oppo_display:dir { search };
+allow system_app sysfs_oppo_display:file { getattr open read };
+
+r_dir_file(system_app, sysfs_oppo_display)
+
+allow system_app vendor_sysfs_graphics:dir { search };
+allow system_app vendor_sysfs_graphics:file { getattr open read };
+
+r_dir_file(system_app, vendor_sysfs_graphics)
+
+allow system_app proc_pagetypeinfo:file { getattr open read };
+
+# Launcher3
+allow system_app sysfs_zram:dir search;
+allow system_app sysfs_zram:file { map getattr open read };
+
+# Battery health
+allow system_app vendor_sysfs_battery_supply:dir search;
+allow system_app vendor_sysfs_battery_supply:file { getattr open read };
+r_dir_file(system_app, vendor_sysfs_battery_supply)
+allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
