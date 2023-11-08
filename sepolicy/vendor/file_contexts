@@ -37,9 +37,6 @@
 # Oppo nv
 /data/opponvitems(/.*)?    u:object_r:vendor_radio_vendor_data_file:s0
 
-# Dolby
-/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
-
 # MMC 
 /sys/devices/virtual/bdi/[0-999]+:[0-999]+/read_ahead_kb               u:object_r:vendor_sysfs_mmc_host:s0
 
