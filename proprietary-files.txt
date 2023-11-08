@@ -51,32 +51,31 @@ system_ext/etc/permissions/audiosphere.xml
 -system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib64/soundfx/libasphere.so
+vendor/lib/libssrec.so
+vendor/lib64/libssrec.so
+odm/lib/libdapparamstorage.so
+odm/lib64/libdapparamstorage.so
+odm/lib/libdlbdsservice.so
+odm/lib64/libdlbdsservice.so
+odm/lib/libqtigef.so
+odm/lib64/libqtigef.so
 
-# Audio Dolby - from Moto G Power
--vendor/etc/vintf/manifest/manifest_dax_dolby.xml|195b23304883383d34aa05a7628d3fc7a574b145
-vendor/etc/media_codecs_dolby_audio.xml|9cb6a40e3082f25b24e698796425201e2a6a25f9
--app/MotoDolbyV3/MotoDolbyV3.apk|751688df37b21c36c1ffff4ce3840cb38d7baf3a
--product/priv-app/daxService/daxService.apk|2e202eacaab90072da154d2fd56ff0bfd919c194
-etc/permissions/com.motorola.dolby.dolbyui.features.xml|7eafc481b604505f057931a6f83c507e357886b3
-etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml|ab4600814879c626a410e607107829faceec9d2c
-product/etc/permissions/com.dolby.daxservice.xml|38eb347890c0140fd6ff329dff5ba94cdabba08b
-vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service|560c5da68e71487db05cfc5e76c3c480a077d255
-vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc|3f2ef278f56489ffaab9fe3578f86f9c1265de8a
-vendor/etc/dolby/dax-default.xml|47b08a933e7aeea230a51ad4c957da70b45526f7
-vendor/lib/libdapparamstorage.so|0f640ae673a390c7671ed60c8fb471e261d6a71f
-vendor/lib/libdapparamstorage_ds1se.so|b9f9e921948bbc631e967a133f0bf9f55b153293
-vendor/lib/libstagefrightdolby.so|21ad7a8abe576395f3d1e0845b1f73954de7f743
-vendor/lib/vendor.dolby.hardware.dms@1.0.so|9a38fe590fcb0d867d1575a00ae2f0dd293896f2
-vendor/lib/soundfx/libswdap.so|2de162b80b491b710e93d2c74e742e0d9f535410
-vendor/lib/soundfx/libswdap_ds1se.so|f2036282356f8111f0b3bc40010ea8f523ce110b
-vendor/lib64/libdapparamstorage.so|980b2f9c0facb0066236c4adf04c3a1b1567bbde
-vendor/lib64/libdapparamstorage_ds1se.so|dcb869b94e23b862b0a048af1794432e5e01b92e
-vendor/lib64/libdlbdsservice.so|69f2a62245f93038cb03e6244ed0d4915e6c5084
-vendor/lib64/libdlbdsservice_ds1se.so|18d40bdb3fce1cdad6264ae32eaab3b9dd61f3d3
-vendor/lib64/soundfx/libswdap.so|e83ca5da45c5de34eb658eca21b6b0a1c961aba3
-vendor/lib64/soundfx/libswdap_ds1se.so|188bb8cd57b34112e16fc65126f86d62bb6b13d4
-vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so|b65fc7185e719bc3a47d319c19c30c156f081179
-vendor/lib64/vendor.dolby.hardware.dms@1.0.so|2660a8f57f7131d08edfea4e1d4ad75a7de97b5b
+# Audio Dolby
+-odm/etc/vintf/manifest/manifest_dax_dolby.xml
+odm/etc/dolby/multimedia_dolby_dax_default.xml
+odm/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+odm/bin/hw/vendor.dolby.hardware.dms@2.0-service
+odm/lib/libstagefright_soft_ddpdec.so
+odm/lib/libstagefrightdolby.so
+odm/lib/libdapparamstorage.so
+odm/lib/libstagefright_soft_ac4dec.so
+odm/lib/vendor.dolby.hardware.dms@2.0-impl.so
+odm/lib/vendor.dolby.hardware.dms@2.0.so
+odm/lib/libdlbdsservice.so
+odm/lib64/libdapparamstorage.so
+odm/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+odm/lib64/vendor.dolby.hardware.dms@2.0.so
+odm/lib64/libdlbdsservice.so
 
 # Audio Sound FX
 vendor/lib/soundfx/libaudiopreprocessing.so
@@ -95,6 +94,10 @@ vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
 vendor/lib64/soundfx/libqcomvoiceprocessing.so
+odm/lib/soundfx/libhwdap.so
+odm/lib/soundfx/libswdap.so
+odm/lib64/soundfx/libhwdap.so
+odm/lib64/soundfx/libswdap.so
 
 # AudioHal Ext
 system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so
