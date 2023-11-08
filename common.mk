@@ -19,6 +19,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Get custom stuff
 $(call inherit-product-if-exists, vendor/hotword/google.mk)
 $(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
+$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
