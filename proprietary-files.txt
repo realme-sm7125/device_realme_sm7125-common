@@ -51,31 +51,6 @@ system_ext/etc/permissions/audiosphere.xml
 -system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib64/soundfx/libasphere.so
-vendor/lib/libssrec.so
-vendor/lib64/libssrec.so
-odm/lib/libdapparamstorage.so
-odm/lib64/libdapparamstorage.so
-odm/lib/libdlbdsservice.so
-odm/lib64/libdlbdsservice.so
-odm/lib/libqtigef.so
-odm/lib64/libqtigef.so
-
-# Audio Dolby
--odm/etc/vintf/manifest/manifest_dax_dolby.xml
-odm/etc/dolby/multimedia_dolby_dax_default.xml
-odm/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-odm/bin/hw/vendor.dolby.hardware.dms@2.0-service
-odm/lib/libstagefright_soft_ddpdec.so
-odm/lib/libstagefrightdolby.so
-odm/lib/libdapparamstorage.so
-odm/lib/libstagefright_soft_ac4dec.so
-odm/lib/vendor.dolby.hardware.dms@2.0-impl.so
-odm/lib/vendor.dolby.hardware.dms@2.0.so
-odm/lib/libdlbdsservice.so
-odm/lib64/libdapparamstorage.so
-odm/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-odm/lib64/vendor.dolby.hardware.dms@2.0.so
-odm/lib64/libdlbdsservice.so
 
 # Audio Sound FX
 vendor/lib/soundfx/libaudiopreprocessing.so
@@ -94,10 +69,6 @@ vendor/lib64/soundfx/libshoebox.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
 vendor/lib64/soundfx/libqcomvisualizer.so
 vendor/lib64/soundfx/libqcomvoiceprocessing.so
-odm/lib/soundfx/libhwdap.so
-odm/lib/soundfx/libswdap.so
-odm/lib64/soundfx/libhwdap.so
-odm/lib64/soundfx/libswdap.so
 
 # Audio FX Modules - from cheetah-user 13 TQ2A.230405.003.E1 9802792 release-keys
 vendor/lib/soundfx/libspatialaudio.so|379b98b020729d05cad4e84202f42335b96bb755
