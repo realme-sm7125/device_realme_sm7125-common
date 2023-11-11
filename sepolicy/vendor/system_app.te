@@ -29,3 +29,9 @@ allow system_app vendor_sysfs_battery_supply:dir search;
 allow system_app vendor_sysfs_battery_supply:file { getattr open read };
 r_dir_file(system_app, vendor_sysfs_battery_supply)
 allow system_app vendor_sysfs_battery_supply:file rw_file_perms;
+
+# Kernel space battery saver
+allow system_app sysfs_battery_saver:dir search;
+allow system_app sysfs_battery_saver:file { getattr open read };
+r_dir_file(system_app, sysfs_battery_saver)
+allow system_app sysfs_battery_saver:file rw_file_perms;

@@ -41,6 +41,9 @@ public class MiscSettingsFragment extends PreferenceFragment implements
     private SwitchPreference mSkipPccPreference;
     private static final String SKIPPCC_ENABLE_KEY = "skip_pcc";
     private static final String SKIPPCC_NODE = "/sys/kernel/oppo_display/skip_pcc_override";
+    private SwitchPreference mBatterySaverPreference;
+    private static final String BATTSAVER_ENABLE_KEY = "battery_saver";
+    private static final String BATTSAVER_NODE = "/sys/module/battery_saver/parameters/enabled";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -77,6 +80,14 @@ public class MiscSettingsFragment extends PreferenceFragment implements
             mSkipPccPreference.setSummary(R.string.skippcc_summary_not_supported);
             mSkipPccPreference.setEnabled(false);
         }
+        mBatterySaverPreference = (SwitchPreference) findPreference(BATTSAVER_ENABLE_KEY);
+        if (FileUtils.fileExists(BATTSAVER_NODE)) {
+            mBatterySaverPreference.setEnabled(true);
+            mBatterySaverPreference.setOnPreferenceChangeListener(this);
+        } else {
+            mBatterySaverPreference.setSummary(R.string.batterysaver_summary_not_supported);
+            mBatterySaverPreference.setEnabled(false);
+        }
     }
 
     @Override
@@ -92,6 +103,9 @@ public class MiscSettingsFragment extends PreferenceFragment implements
         }
         if (SKIPPCC_ENABLE_KEY.equals(preference.getKey())) {
             FileUtils.writeLine(SKIPPCC_NODE, (Boolean) newValue ? "1" : "0");
+        }
+        if (BATTSAVER_ENABLE_KEY.equals(preference.getKey())) {
+            FileUtils.writeLine(BATTSAVER_NODE, (Boolean) newValue ? "Y" : "N");
         }
         return true;
     }
