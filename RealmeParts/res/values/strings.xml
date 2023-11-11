@@ -217,4 +217,9 @@
     <string name="fastcharge_summary">Force restricts fast charging to reduce the heat produced while charging and thus extending the lifespan of the battery\nTo force restrict fast charging enable this toggle, whereas to keep using fast charging keep this toggle disabled</string>
     <string name="fastcharge_title">Restrict fast charging</string>
     <string name="fastcharge_summary_not_supported">Restriction of fast charge is not currently supported</string>
+
+    <!-- Skip PCC -->
+    <string name="skippcc_title">Panel color correction (PCC) override</string>
+    <string name="skippcc_summary">Allow the user to chose whether to keep panel color correction (PCC) enabled while pressing the UDFPS circle, change it\'s value for the most suited\nTry enable, disable and see what makes your fingerprint unlock best</string>
+    <string name="skippcc_summary_not_supported">Allow the user to chose whether to keep panel color correction (PCC) enabled while pressing the UDFPS circle\nThis feature is not supported for you, but when supports you can change it\'s value to the most suited\nTry enable, disable and see what makes your fingerprint unlock best\nCurrently only available for mello oof mega omega custom kernel</string>
 </resources>

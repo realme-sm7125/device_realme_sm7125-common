@@ -43,6 +43,12 @@
             android:title="@string/fastcharge_title"
             android:summary="@string/fastcharge_summary" />
 
+        <SwitchPreference
+            android:key="skip_pcc"
+            android:defaultValue="false"
+            android:title="@string/skippcc_title"
+            android:summary="@string/skippcc_summary" />
+
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference

@@ -53,6 +53,8 @@
 /sys/kernel/oppo_display/hbm                               u:object_r:sysfs_oppo_display:s0
 # Fastcharge
 /sys/class/qcom-battery/restrict_chg                       u:object_r:vendor_sysfs_battery_supply:s0
+# PCC override
+/sys/kernel/oppo_display/skip_pcc_override                 u:object_r:sysfs_oppo_display:s0
 
 # SSR
 /sys/devices/platform/soc/9800000.qcom,npu/subsys[0-9]/name          u:object_r:vendor_sysfs_ssr:s0
