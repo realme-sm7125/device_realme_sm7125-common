@@ -222,4 +222,9 @@
     <string name="skippcc_title">Panel color correction (PCC) override</string>
     <string name="skippcc_summary">Allow the user to chose whether to keep panel color correction (PCC) enabled while pressing the UDFPS circle, change it\'s value for the most suited\nTry enable, disable and see what makes your fingerprint unlock best</string>
     <string name="skippcc_summary_not_supported">Allow the user to chose whether to keep panel color correction (PCC) enabled while pressing the UDFPS circle\nThis feature is not supported for you, but when supports you can change it\'s value to the most suited\nTry enable, disable and see what makes your fingerprint unlock best\nCurrently only available for mello oof mega omega custom kernel</string>
+
+    <!-- Battery saver -->
+    <string name="batterysaver_title">Kernel space Battery Saver</string>
+    <string name="batterysaver_summary">Not your regular battery saver\nThis battery saver works kernel side and prevents CPU GPU boost, sched tune boost, iowait boost to save more battery\nEnable to experience it</string>
+    <string name="batterysaver_summary_not_supported">Not your regular battery saver\nThis battery saver is not supported for you but it works kernel side and prevents CPU GPU boost, sched tune boost, iowait boost and more to save more battery\nCurrently only available for mello oof mega omega custom kernel</string>
 </resources>

@@ -53,6 +53,8 @@ public class BootReceiver extends BroadcastReceiver {
     private static final String FASTCHARGE_NODE = "/sys/class/qcom-battery/restrict_chg";
     private static final String SKIPPCC_ENABLE_KEY = "skip_pcc";
     private static final String SKIPPCC_NODE = "/sys/kernel/oppo_display/skip_pcc_override";
+    private static final String BATTSAVER_ENABLE_KEY = "battery_saver";
+    private static final String BATTSAVER_NODE = "/sys/module/battery_saver/parameters/enabled";
 
 
     @Override
@@ -95,6 +97,10 @@ public class BootReceiver extends BroadcastReceiver {
         boolean SkipPccEnabled = sharedPrefs.getBoolean(SKIPPCC_ENABLE_KEY, false);
         try {
             FileUtils.writeLine(SKIPPCC_NODE, SkipPccEnabled ? "1" : "0");
+        } catch(Exception e) {}
+        boolean BatterySaverEnabled = sharedPrefs.getBoolean(BATTSAVER_ENABLE_KEY, false);
+        try {
+            FileUtils.writeLine(BATTSAVER_NODE, BatterySaverEnabled ? "Y" : "N");
         } catch(Exception e) {}
 
         // Override HDR types

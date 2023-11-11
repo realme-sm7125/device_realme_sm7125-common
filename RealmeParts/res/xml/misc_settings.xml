@@ -49,6 +49,12 @@
             android:title="@string/skippcc_title"
             android:summary="@string/skippcc_summary" />
 
+        <SwitchPreference
+            android:key="battery_saver"
+            android:defaultValue="false"
+            android:title="@string/batterysaver_title"
+            android:summary="@string/batterysaver_summary" />
+
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
