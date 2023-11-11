@@ -38,6 +38,9 @@ public class MiscSettingsFragment extends PreferenceFragment implements
     private SwitchPreference mFastChargePreference;
     private static final String FASTCHARGE_ENABLE_KEY = "fast_charge";
     private static final String FASTCHARGE_NODE = "/sys/class/qcom-battery/restrict_chg";
+    private SwitchPreference mSkipPccPreference;
+    private static final String SKIPPCC_ENABLE_KEY = "skip_pcc";
+    private static final String SKIPPCC_NODE = "/sys/kernel/oppo_display/skip_pcc_override";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -66,6 +69,14 @@ public class MiscSettingsFragment extends PreferenceFragment implements
             mFastChargePreference.setSummary(R.string.fastcharge_summary_not_supported);
             mFastChargePreference.setEnabled(false);
         }
+        mSkipPccPreference = (SwitchPreference) findPreference(SKIPPCC_ENABLE_KEY);
+        if (FileUtils.fileExists(SKIPPCC_NODE)) {
+            mSkipPccPreference.setEnabled(true);
+            mSkipPccPreference.setOnPreferenceChangeListener(this);
+        } else {
+            mSkipPccPreference.setSummary(R.string.skippcc_summary_not_supported);
+            mSkipPccPreference.setEnabled(false);
+        }
     }
 
     @Override
@@ -78,6 +89,9 @@ public class MiscSettingsFragment extends PreferenceFragment implements
         }
         if (FASTCHARGE_ENABLE_KEY.equals(preference.getKey())) {
             FileUtils.writeLine(FASTCHARGE_NODE, (Boolean) newValue ? "1" : "0");
+        }
+        if (SKIPPCC_ENABLE_KEY.equals(preference.getKey())) {
+            FileUtils.writeLine(SKIPPCC_NODE, (Boolean) newValue ? "1" : "0");
         }
         return true;
     }

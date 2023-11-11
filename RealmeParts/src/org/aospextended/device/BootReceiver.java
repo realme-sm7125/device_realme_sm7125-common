@@ -48,6 +48,8 @@ public class BootReceiver extends BroadcastReceiver {
     private static final String GAMESWITCH_NODE = "/proc/touchpanel/game_switch_enable";
     private static final String FASTCHARGE_ENABLE_KEY = "fast_charge";
     private static final String FASTCHARGE_NODE = "/sys/class/qcom-battery/restrict_chg";
+    private static final String SKIPPCC_ENABLE_KEY = "skip_pcc";
+    private static final String SKIPPCC_NODE = "/sys/kernel/oppo_display/skip_pcc_override";
 
 
     @Override
@@ -87,6 +89,11 @@ public class BootReceiver extends BroadcastReceiver {
         try {
             FileUtils.writeLine(FASTCHARGE_NODE, FastChargeEnabled ? "1" : "0");
         } catch(Exception e) {}
+        boolean SkipPccEnabled = sharedPrefs.getBoolean(SKIPPCC_ENABLE_KEY, false);
+        try {
+            FileUtils.writeLine(SKIPPCC_NODE, SkipPccEnabled ? "1" : "0");
+        } catch(Exception e) {}
+
     }
 
     private void enableComponent(Context context, String component) {
