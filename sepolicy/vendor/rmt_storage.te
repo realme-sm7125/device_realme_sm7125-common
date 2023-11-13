@@ -1,7 +1,0 @@
-allow vendor_rmt_storage vendor_mdmreason_device:chr_file rw_file_perms;
-
-get_prop(vendor_rmt_storage, oppo_debug_prop);
-
-r_dir_file(vendor_rmt_storage, proc_oppoversion);
-
-allow vendor_rmt_storage vendor_sysfs_soc_sensitive:file { open read };
