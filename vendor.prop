@@ -189,6 +189,10 @@ ro.vendor.audio.sfx.earadj=true
 ro.vendor.audio.sfx.harmankardon=true
 ro.vendor.audio.sfx.scenario=true
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # JNI
 ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0
