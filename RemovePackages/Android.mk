@@ -8,7 +8,13 @@ LOCAL_OVERRIDES_PACKAGES := \
     YouTube \
     YTMusic \
     YouTubeMusicPrebuilt \
-    SoundAmplifierPrebuilt
+    SoundAmplifierPrebuilt \
+    PixelLiveWallpaperPrebuilt \
+    PixelWallpapers2020 \
+    PixelWallpapers2021 \
+    PixelWallpapers2022 \
+    PixelWallpapers2022a \
+    PixelWallpapers2023Tablet
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
