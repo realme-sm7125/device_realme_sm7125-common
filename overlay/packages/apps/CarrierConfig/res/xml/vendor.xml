@@ -1910,4 +1910,9 @@
             <item value="3,11,9,10,15" />
         </string-array>
     </carrier_config>
+
+    <!-- PA: Enable ViLTE for Airtel India -->
+    <carrier_config mcc="404" mnc="02,03,10,16,31,40,45,49,70,90,92,93,94,95,96,97,98">
+        <boolean name="carrier_vt_available_bool" value="true" />
+    </carrier_config>
 </carrier_config_list>
