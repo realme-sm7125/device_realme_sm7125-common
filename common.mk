@@ -285,7 +285,7 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage \
-    $(LOCAL_PATH)/overlay-evolution
+    $(LOCAL_PATH)/overlay-derp
 
 PRODUCT_PACKAGES += \
     PixelLauncherConfigOverlay
@@ -295,8 +295,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
 # Prebuilt apps (papps)
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V3_8
+#PRODUCT_PACKAGES += \
+#    GCamGOPrebuilt-V3_8
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/papps/priv-app/GCamGo/files/hiddenapi-package-whitelist-GCamGo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-GCamGo.xml \
@@ -307,7 +307,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.xiaomi-libperfmgr
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json    
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # QTI FWK Detect
 PRODUCT_PACKAGES += \
