@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-#GCamGo
+# GCamGo
 include $(CLEAR_VARS)
 LOCAL_MODULE := GCamGo
 LOCAL_SRC_FILES := priv-app/GCamGo/GCamGo.apk
@@ -9,4 +9,14 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_OVERRIDES_PACKAGES := Snap Camera2 GrapheneCamera
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_DEX_PREOPT := false
+include $(BUILD_PREBUILT)
+
+# PixelSearch
+include $(CLEAR_VARS)
+LOCAL_MODULE := PixelSearch
+LOCAL_SRC_FILES := priv-app/PixelSearch/PixelSearch.apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_DEX_PREOPT := true
 include $(BUILD_PREBUILT)
