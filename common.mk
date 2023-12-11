@@ -295,8 +295,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
 
 # Prebuilt apps (papps)
-PRODUCT_PACKAGES += \
-    PixelSearch
+#PRODUCT_PACKAGES += \
+#    GCamGOPrebuilt-V3_8
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/papps/priv-app/GCamGo/files/hiddenapi-package-whitelist-GCamGo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/hiddenapi-package-whitelist-GCamGo.xml \
