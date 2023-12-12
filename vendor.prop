@@ -124,6 +124,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.systemuicompilerfilter=speed
+pm.dexopt.shared=quicken
 
 # Dirac
 hpx_send_params=1
