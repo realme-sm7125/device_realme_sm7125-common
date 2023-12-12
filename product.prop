@@ -30,6 +30,7 @@ vendor.display.disable_rotator_downscale=1
 ro.config.low_ram=false
 ro.lmk.log_stats=false
 ro.lmk.kill_heaviest_task=true
+ro.lmk.swap_free_low_percentage=100
 
 # LMK tuning
 ro.lmk.filecache_min_kb=153600
