@@ -72,6 +72,11 @@ void check_nfc_support()
     }
 }
 
+bool IsRecoveryMode()
+{
+    return access("/system/bin/recovery", F_OK) == 0;
+}
+
 void load_dalvik_properties() {
     struct sysinfo sys;
 
@@ -108,4 +113,9 @@ void vendor_load_properties()
     property_override("ro.boot.vbmeta.device_state", "locked");
     property_override("ro.oem_unlock_supported", "0");
     property_override("vendor.boot.vbmeta.device_state", "locked");
+
+    // SafetyNet workaround spoofing
+    if (!IsRecoveryMode()) {
+        property_override("ro.product.first_api_level", "32");
+    }
 }
