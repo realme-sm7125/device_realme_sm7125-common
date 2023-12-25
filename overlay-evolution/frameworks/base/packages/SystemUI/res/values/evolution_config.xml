@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) Android Open Source Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Number of batteries device have -->
+    <integer name="config_deviceBatteryNum" translatable="false">2</integer>
+
+</resources>
