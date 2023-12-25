@@ -98,6 +98,25 @@ void load_dalvik_properties() {
     property_override("dalvik.vm.heapminfree", "8m");
 }
 
+void load_mello_properties() {
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+    if (sys.totalram >= 7ull * 1024 * 1024 * 1024) {
+        // 8GB RAM
+        property_override("ro.mello.ram", "8gb");
+    } else {
+        // 6GB RAM
+        property_override("ro.mello.ram", "6gb");
+    }
+
+    property_override("ro.mello.storage", "128gb");
+    property_override("ro.mello.chipset", "Snapdragon™ 720G");
+    property_override("ro.mello.maintainer", "Mayur Varde");
+    property_override("ro.mello.battery", "4500 mah");
+    property_override("ro.mello.display_resolution", "2400x1080");
+}
+
 void vendor_load_properties()
 {
     // NFC Support
@@ -118,4 +137,7 @@ void vendor_load_properties()
     if (!IsRecoveryMode()) {
         property_override("ro.product.first_api_level", "32");
     }
+
+    // Settings UI
+    load_mello_properties();
 }
