@@ -418,33 +418,33 @@
         <item>195.7</item>
         <item>204.5</item>
         <item>214</item>
-        <item>221.8</item>
         <item>234</item>
-        <item>242.1</item>
-        <item>250.6</item>
-        <item>263.4</item>
-        <item>272.4</item>
-        <item>282.5</item>
-        <item>296.3</item>
-        <item>305.6</item>
-        <item>315.3</item>
-        <item>329.8</item>
-        <item>339.8</item>
-        <item>349.7</item>
-        <item>357.4</item>
-        <item>364.6</item>
-        <item>374.6</item>
-        <item>384.9</item>
-        <item>392.5</item>
-        <item>402.8</item>
-        <item>413.6</item>
-        <item>421.6</item>
-        <item>432.2</item>
-        <item>440.3</item>
-        <item>448.3</item>
-        <item>459.2</item>
-        <item>467.6</item>
-        <item>478.5</item>
+        <item>254</item>
+        <item>272.1</item>
+        <item>290.6</item>
+        <item>313.4</item>
+        <item>330.4</item>
+        <item>360.5</item>
+        <item>396.3</item>
+        <item>415.6</item>
+        <item>438.3</item>
+        <item>469.8</item>
+        <item>498.8</item>
+        <item>519.7</item>
+        <item>527.4</item>
+        <item>544.6</item>
+        <item>574.6</item>
+        <item>594.9</item>
+        <item>612.5</item>
+        <item>635.8</item>
+        <item>656.6</item>
+        <item>671.6</item>
+        <item>692.2</item>
+        <item>707.3</item>
+        <item>727.3</item>
+        <item>759.2</item>
+        <item>777.6</item>
+        <item>800</item>
     </array>
      
     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
