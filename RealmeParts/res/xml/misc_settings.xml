@@ -44,6 +44,12 @@
             android:summary="@string/fastcharge_summary" />
 
         <SwitchPreference
+            android:key="force_fastcharge"
+            android:defaultValue="false"
+            android:title="@string/force_fastcharge_title"
+            android:summary="@string/force_fastcharge_summary" />
+
+        <SwitchPreference
             android:key="skip_pcc"
             android:defaultValue="false"
             android:title="@string/skippcc_title"

@@ -218,6 +218,11 @@
     <string name="fastcharge_title">Restrict fast charging</string>
     <string name="fastcharge_summary_not_supported">Restriction of fast charge is not currently supported</string>
 
+    <!-- Force Fastcharge -->
+    <string name="force_fastcharge_title">Force USB 2\.0 fast charge</string>
+    <string name="force_fastcharge_summary">When charging with USB 2\.0 it enables force charging up to 900mA</string>
+    <string name="force_fastcharge_summary_not_supported">When charging with USB 2\.0 it enables force charging up to 900mA\nCurrently only available for mello oof mega omega custom kernel</string>
+
     <!-- Skip PCC -->
     <string name="skippcc_title">Panel color correction (PCC) override</string>
     <string name="skippcc_summary">Allow the user to chose whether to keep panel color correction (PCC) enabled while pressing the UDFPS circle, change it\'s value for the most suited\nTry enable, disable and see what makes your fingerprint unlock best</string>
