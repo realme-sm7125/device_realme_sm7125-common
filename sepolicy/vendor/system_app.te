@@ -35,3 +35,10 @@ allow system_app sysfs_battery_saver:dir search;
 allow system_app sysfs_battery_saver:file { getattr open read };
 r_dir_file(system_app, sysfs_battery_saver)
 allow system_app sysfs_battery_saver:file rw_file_perms;
+
+# Force fast charge
+type vendor_sysfs_fastcharge, fs_type, sysfs_type;
+allow system_app vendor_sysfs_fastcharge:dir search;
+allow system_app vendor_sysfs_fastcharge:file { getattr open read };
+r_dir_file(system_app, vendor_sysfs_fastcharge)
+allow system_app vendor_sysfs_fastcharge:file rw_file_perms;

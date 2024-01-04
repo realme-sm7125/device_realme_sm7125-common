@@ -47,6 +47,9 @@
 /sys/kernel/oppo_display/hbm                               u:object_r:sysfs_oppo_display:s0
 # Fastcharge
 /sys/class/qcom-battery/restrict_chg                       u:object_r:vendor_sysfs_battery_supply:s0
+# Force Fastcharge
+/sys/module/oplus_charger/parameters/force_fast_charge         u:object_r:vendor_sysfs_fastcharge:s0
+/sys/module/oplus_charger/parameters/ffc_val                   u:object_r:vendor_sysfs_fastcharge:s0
 # PCC override
 /sys/kernel/oppo_display/skip_pcc_override                 u:object_r:sysfs_oppo_display:s0
 # Battery saver

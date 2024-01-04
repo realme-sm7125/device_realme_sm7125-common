@@ -38,6 +38,9 @@ public class MiscSettingsFragment extends PreferenceFragment implements
     private SwitchPreference mFastChargePreference;
     private static final String FASTCHARGE_ENABLE_KEY = "fast_charge";
     private static final String FASTCHARGE_NODE = "/sys/class/qcom-battery/restrict_chg";
+    private SwitchPreference mForceFastChargePreference;
+    private static final String FORCE_FASTCHARGE_ENABLE_KEY = "force_fastcharge";
+    private static final String FORCE_FASTCHARGE_NODE = "/sys/module/oplus_charger/parameters/force_fast_charge";
     private SwitchPreference mSkipPccPreference;
     private static final String SKIPPCC_ENABLE_KEY = "skip_pcc";
     private static final String SKIPPCC_NODE = "/sys/kernel/oppo_display/skip_pcc_override";
@@ -72,6 +75,14 @@ public class MiscSettingsFragment extends PreferenceFragment implements
             mFastChargePreference.setSummary(R.string.fastcharge_summary_not_supported);
             mFastChargePreference.setEnabled(false);
         }
+        mForceFastChargePreference = (SwitchPreference) findPreference(FORCE_FASTCHARGE_ENABLE_KEY);
+        if (FileUtils.fileExists(FORCE_FASTCHARGE_NODE)) {
+            mForceFastChargePreference.setEnabled(true);
+            mForceFastChargePreference.setOnPreferenceChangeListener(this);
+        } else {
+            mForceFastChargePreference.setSummary(R.string.force_fastcharge_summary_not_supported);
+            mForceFastChargePreference.setEnabled(false);
+        }
         mSkipPccPreference = (SwitchPreference) findPreference(SKIPPCC_ENABLE_KEY);
         if (FileUtils.fileExists(SKIPPCC_NODE)) {
             mSkipPccPreference.setEnabled(true);
@@ -100,6 +111,9 @@ public class MiscSettingsFragment extends PreferenceFragment implements
         }
         if (FASTCHARGE_ENABLE_KEY.equals(preference.getKey())) {
             FileUtils.writeLine(FASTCHARGE_NODE, (Boolean) newValue ? "1" : "0");
+        }
+        if (FORCE_FASTCHARGE_ENABLE_KEY.equals(preference.getKey())) {
+            FileUtils.writeLine(FORCE_FASTCHARGE_NODE, (Boolean) newValue ? "1" : "0");
         }
         if (SKIPPCC_ENABLE_KEY.equals(preference.getKey())) {
             FileUtils.writeLine(SKIPPCC_NODE, (Boolean) newValue ? "1" : "0");
