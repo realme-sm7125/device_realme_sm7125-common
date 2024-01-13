@@ -28,7 +28,7 @@
         <activity
             android:name=".RealmePartsActivity"
             android:label="@string/RealmeParts"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -38,6 +38,7 @@
         <activity-alias
             android:name=".RealmeParts"
             android:label="@string/RealmeParts"
+            android:exported="true"
             android:targetActivity="RealmePartsActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -61,13 +62,14 @@
 
         <activity
             android:name=".gestures.TouchGesturesActivity"
+            android:exported="true"
             android:label="@string/screen_off_gestures">
           <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
           </intent-filter>
         </activity>
 
-        <receiver android:name=".BootReceiver" >
+        <receiver android:name=".BootReceiver" android:exported="false">
           <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -82,6 +84,7 @@
             android:name=".display.DcDimmingTileService"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/dc_dimming_enable_title"
+            android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action
@@ -93,6 +96,7 @@
             android:name=".display.HBMTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/hbm_mode_title"
+            android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action
@@ -104,6 +108,7 @@
             android:name=".misc.GameSwitchTileService"
             android:icon="@drawable/ic_gameswitch_tile"
             android:label="@string/gameswitch_enable_title"
+            android:exported="true"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action
@@ -113,6 +118,7 @@
 
         <activity
             android:name=".doze.DozeSettingsActivity"
+            android:exported="true"
             android:label="@string/ambient_display_gestures_title">
             <intent-filter>
                 <action android:name="org.aospextended.device.DOZE_SETTINGS" />
@@ -126,6 +132,7 @@
 
         <activity
             android:name="org.aospextended.device.display.DisplaySettingsActivity"
+            android:exported="true"
             android:label="@string/display_settings_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
@@ -135,6 +142,7 @@
 
         <activity
             android:name="org.aospextended.device.misc.MiscSettingsActivity"
+            android:exported="true"
             android:label="@string/misc_settings_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
