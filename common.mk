@@ -247,6 +247,7 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libOmxSwVdec \
+    libOmxVidcCommon \
     libstagefrighthw
 
 PRODUCT_COPY_FILES += \
