@@ -255,6 +255,8 @@ ro.soc.model=SM7125
 persist.vendor.usb.config.extra=none
 
 # Usb extras
+vendor.usb.product_string=realme 7 Pro
+vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
 vendor.usb.qdss.inst.name=qdss
 vendor.usb.rmnet.func.name=gsi
