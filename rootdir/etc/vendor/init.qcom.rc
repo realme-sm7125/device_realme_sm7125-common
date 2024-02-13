@@ -106,6 +106,9 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
+    # Disable UFS clock gating
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 0
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
     #ifdef OPLUS_BUG_STABLITY
@@ -548,6 +551,9 @@ on property:sys.boot_completed=1
 
     # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
+
+    # Enable UFS clock gating back
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
