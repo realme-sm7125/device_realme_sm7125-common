@@ -147,6 +147,7 @@ BOARD_KERNEL_CMDLINE += swiotlb=1
 BOARD_KERNEL_CMDLINE += kpti=off
 BOARD_KERNEL_CMDLINE += allow_file_spec_access
 BOARD_KERNEL_CMDLINE += irqaffinity=0-3
+BOARD_KERNEL_CMDLINE += pelt=8
 
 # Media
 TARGET_USES_ION := true
