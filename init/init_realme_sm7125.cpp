@@ -140,4 +140,7 @@ void vendor_load_properties()
 
     // Settings UI
     load_mello_properties();
+
+    // Override Device name
+    property_override("ro.product.marketname", "realme 7 Pro");
 }
