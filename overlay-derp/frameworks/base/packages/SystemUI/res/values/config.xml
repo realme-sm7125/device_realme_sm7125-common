@@ -16,7 +16,7 @@
 ** limitations under the License.
 */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
 
     <!-- Whether long press is required to activate keyguard quick affordance buttons -->
     <bool name="config_keyguardQuickAffordanceRequiresLongPress">false</bool>
